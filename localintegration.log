@@ -1,0 +1,41 @@
+go build -i -ldflags "-X main.gitCommit=7783942b6827c8c2371eab0ef4e59fe46bc01c54 -X main.version=0.1.1" -tags "seccomp" -o runc .
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+bats -t tests/integration
+1..32
+ok 1 runc update --kernel-memory (initialized)
+ok 2 runc update --kernel-memory (uninitialized)
+not ok 3 checkpoint and restore
+# (in test file tests/integration/checkpoint.bats, line 40)
+#   `[ "$status" -eq 0 ]' failed
+# Command "eval __runc state 'test_busybox' | grep -q 'destroyed'" failed 10 times. Output: open /tmp/runc/test_busybox/state.json: no such file or directory
+ok 4 global --debug
+ok 5 global --debug to --log
+ok 6 global --debug to --log --log-format 'text'
+ok 7 global --debug to --log --log-format 'json'
+ok 8 runc delete
+ok 9 events --stats
+ok 10 events --interval default 
+ok 11 events --interval 1s 
+ok 12 events --interval 100ms 
+ok 13 runc exec
+ok 14 runc exec --pid-file
+ok 15 runc -h
+ok 16 runc command -h
+ok 17 runc foo -h
+ok 18 kill detached busybox
+ok 19 list
+ok 20 runc pause and resume
+ok 21 global --root
+ok 22 spec generation cwd
+ok 23 spec generation --bundle
+ok 24 spec validator
+ok 25 runc start detached
+ok 26 runc start detached --pid-file
+ok 27 runc start
+ok 28 runc start with rootfs set to .
+ok 29 runc start --pid-file
+ok 30 state
+ok 31 update
+ok 32 runc version
+Makefile:66: recipe for target 'localintegration' failed
+make: *** [localintegration] Error 1

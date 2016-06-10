@@ -1,0 +1,548 @@
+make unittest integration
+make[1]: Entering directory `/home/hmeng/go/src/github.com/opencontainers/runc'
+docker build -t runc_test -f script/test_Dockerfile .
+Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon  23.4 MBSending build context to Docker daemon 23.95 MBSending build context to Docker daemon 24.51 MBSending build context to Docker daemon 25.07 MBSending build context to Docker daemon 25.59 MB
+Step 1 : FROM golang:1.6.2
+ ---> a1a3e6fc438d
+Step 2 : RUN echo 'deb http://httpredir.debian.org/debian jessie-backports main' > /etc/apt/sources.list.d/backports.list
+ ---> Using cache
+ ---> e630b738b128
+Step 3 : RUN apt-get update && apt-get install -y     build-essential     curl     gawk     iptables     pkg-config     libaio-dev     libcap-dev     libprotobuf-dev     libprotobuf-c0-dev     libseccomp2/jessie-backports     libseccomp-dev/jessie-backports     protobuf-c-compiler     protobuf-compiler     python-minimal     --no-install-recommends
+ ---> Using cache
+ ---> 709727cdd4d9
+Step 4 : RUN cd /tmp     && git clone https://github.com/sstephenson/bats.git     && cd bats     && git reset --hard 03608115df2071fff4eaaff1605768c275e5f81f     && ./install.sh /usr/local
+ ---> Using cache
+ ---> 9af51e1ca118
+Step 5 : ENV CRIU_VERSION 1.7
+ ---> Using cache
+ ---> c69089dd640b
+Step 6 : RUN mkdir -p /usr/src/criu     && curl -sSL https://github.com/xemul/criu/archive/v${CRIU_VERSION}.tar.gz | tar -v -C /usr/src/criu/ -xz --strip-components=1     && cd /usr/src/criu     && make install-criu
+ ---> Using cache
+ ---> ef8ab71cc9fe
+Step 7 : ENV ROOTFS /busybox
+ ---> Using cache
+ ---> 99a58f62a453
+Step 8 : RUN mkdir -p ${ROOTFS}     && curl -o- -sSL 'https://github.com/jpetazzo/docker-busybox/raw/buildroot-2014.11/rootfs.tar' | tar -C ${ROOTFS} -xf -
+ ---> Using cache
+ ---> 90e2936040af
+Step 9 : COPY script/tmpmount /
+ ---> Using cache
+ ---> d3d6f1f94db1
+Step 10 : WORKDIR /go/src/github.com/opencontainers/runc
+ ---> Using cache
+ ---> 22e91e0cc48c
+Step 11 : ENTRYPOINT /tmpmount
+ ---> Using cache
+ ---> 8c20fb2ff0ac
+Successfully built 8c20fb2ff0ac
+docker run -e TESTFLAGS -ti --privileged --rm -v /home/hmeng/go/src/github.com/opencontainers/runc:/go/src/github.com/opencontainers/runc runc_test make localunittest
+go build -i -ldflags "-X main.gitCommit=bb5473fb5358bca2f4df0ff5c3a8e66ebaaecfdf -X main.version=1.0.0-rc1" -tags "seccomp" -o runc .
+go test -timeout 3m -tags "seccomp"  -v ./...
+?   	_/go/src/github.com/opencontainers/runc	[no test files]
+=== RUN   TestGetContainerPids
+--- PASS: TestGetContainerPids (0.00s)
+=== RUN   TestGetContainerStats
+--- PASS: TestGetContainerStats (0.00s)
+=== RUN   TestGetContainerState
+--- PASS: TestGetContainerState (0.00s)
+=== RUN   TestErrorCode
+--- PASS: TestErrorCode (0.00s)
+=== RUN   TestFactoryNew
+--- PASS: TestFactoryNew (0.00s)
+=== RUN   TestFactoryNewTmpfs
+--- PASS: TestFactoryNewTmpfs (0.00s)
+=== RUN   TestFactoryLoadNotExists
+--- PASS: TestFactoryLoadNotExists (0.00s)
+=== RUN   TestFactoryLoadContainer
+time="2016-06-10T17:34:58Z" level=warning msg="cannot serialize hook of type libcontainer.unserializableHook, skipping" 
+--- PASS: TestFactoryLoadContainer (0.00s)
+=== RUN   TestErrorDetail
+--- PASS: TestErrorDetail (0.00s)
+=== RUN   TestNotifyOnOOM
+--- PASS: TestNotifyOnOOM (0.00s)
+=== RUN   TestNotifyMemoryPressure
+--- PASS: TestNotifyMemoryPressure (0.00s)
+=== RUN   TestCheckMountDestOnProc
+--- PASS: TestCheckMountDestOnProc (0.00s)
+=== RUN   TestCheckMountDestInSys
+--- PASS: TestCheckMountDestInSys (0.00s)
+=== RUN   TestCheckMountDestFalsePositive
+--- PASS: TestCheckMountDestFalsePositive (0.00s)
+=== RUN   TestCheckMountRoot
+--- PASS: TestCheckMountRoot (0.00s)
+=== RUN   TestNeedsSetupDev
+--- PASS: TestNeedsSetupDev (0.00s)
+=== RUN   TestNeedsSetupDevStrangeSource
+--- PASS: TestNeedsSetupDevStrangeSource (0.00s)
+=== RUN   TestNeedsSetupDevStrangeDest
+--- PASS: TestNeedsSetupDevStrangeDest (0.00s)
+=== RUN   TestNeedsSetupDevStrangeSourceDest
+--- PASS: TestNeedsSetupDevStrangeSourceDest (0.00s)
+=== RUN   TestStateStatus
+--- PASS: TestStateStatus (0.00s)
+=== RUN   TestStoppedStateTransition
+--- PASS: TestStoppedStateTransition (0.00s)
+=== RUN   TestPausedStateTransition
+--- PASS: TestPausedStateTransition (0.00s)
+=== RUN   TestRestoredStateTransition
+--- PASS: TestRestoredStateTransition (0.00s)
+PASS
+ok  	_/go/src/github.com/opencontainers/runc/libcontainer	0.018s
+?   	_/go/src/github.com/opencontainers/runc/libcontainer/apparmor	[no test files]
+=== RUN   TestParseCgroups
+--- PASS: TestParseCgroups (0.00s)
+=== RUN   TestGetCgroupMounts
+--- PASS: TestGetCgroupMounts (0.00s)
+PASS
+ok  	_/go/src/github.com/opencontainers/runc/libcontainer/cgroups	0.007s
+=== RUN   TestInvalidCgroupPath
+--- PASS: TestInvalidCgroupPath (0.00s)
+=== RUN   TestInvalidAbsoluteCgroupPath
+--- PASS: TestInvalidAbsoluteCgroupPath (0.00s)
+=== RUN   TestInvalidCgroupParent
+--- PASS: TestInvalidCgroupParent (0.00s)
+=== RUN   TestInvalidAbsoluteCgroupParent
+--- PASS: TestInvalidAbsoluteCgroupParent (0.00s)
+=== RUN   TestInvalidCgroupName
+--- PASS: TestInvalidCgroupName (0.00s)
+=== RUN   TestInvalidAbsoluteCgroupName
+--- PASS: TestInvalidAbsoluteCgroupName (0.00s)
+=== RUN   TestInvalidCgroupNameAndParent
+--- PASS: TestInvalidCgroupNameAndParent (0.00s)
+=== RUN   TestInvalidAbsoluteCgroupNameAndParent
+--- PASS: TestInvalidAbsoluteCgroupNameAndParent (0.00s)
+=== RUN   TestBlkioSetWeight
+--- PASS: TestBlkioSetWeight (0.00s)
+=== RUN   TestBlkioSetWeightDevice
+--- PASS: TestBlkioSetWeightDevice (0.00s)
+=== RUN   TestBlkioSetMultipleWeightDevice
+--- PASS: TestBlkioSetMultipleWeightDevice (0.00s)
+=== RUN   TestBlkioStats
+--- PASS: TestBlkioStats (0.00s)
+=== RUN   TestBlkioStatsNoSectorsFile
+--- PASS: TestBlkioStatsNoSectorsFile (0.00s)
+=== RUN   TestBlkioStatsNoServiceBytesFile
+--- PASS: TestBlkioStatsNoServiceBytesFile (0.00s)
+=== RUN   TestBlkioStatsNoServicedFile
+--- PASS: TestBlkioStatsNoServicedFile (0.00s)
+=== RUN   TestBlkioStatsNoQueuedFile
+--- PASS: TestBlkioStatsNoQueuedFile (0.00s)
+=== RUN   TestBlkioStatsNoServiceTimeFile
+--- PASS: TestBlkioStatsNoServiceTimeFile (0.00s)
+=== RUN   TestBlkioStatsNoWaitTimeFile
+--- PASS: TestBlkioStatsNoWaitTimeFile (0.00s)
+=== RUN   TestBlkioStatsNoMergedFile
+--- PASS: TestBlkioStatsNoMergedFile (0.00s)
+=== RUN   TestBlkioStatsNoTimeFile
+--- PASS: TestBlkioStatsNoTimeFile (0.00s)
+=== RUN   TestBlkioStatsUnexpectedNumberOfFields
+--- PASS: TestBlkioStatsUnexpectedNumberOfFields (0.00s)
+=== RUN   TestBlkioStatsUnexpectedFieldType
+--- PASS: TestBlkioStatsUnexpectedFieldType (0.00s)
+=== RUN   TestNonCFQBlkioStats
+--- PASS: TestNonCFQBlkioStats (0.00s)
+=== RUN   TestBlkioSetThrottleReadBpsDevice
+--- PASS: TestBlkioSetThrottleReadBpsDevice (0.00s)
+=== RUN   TestBlkioSetThrottleWriteBpsDevice
+--- PASS: TestBlkioSetThrottleWriteBpsDevice (0.00s)
+=== RUN   TestBlkioSetThrottleReadIOpsDevice
+--- PASS: TestBlkioSetThrottleReadIOpsDevice (0.00s)
+=== RUN   TestBlkioSetThrottleWriteIOpsDevice
+--- PASS: TestBlkioSetThrottleWriteIOpsDevice (0.00s)
+=== RUN   TestCpuSetShares
+--- PASS: TestCpuSetShares (0.00s)
+=== RUN   TestCpuSetBandWidth
+--- PASS: TestCpuSetBandWidth (0.00s)
+=== RUN   TestCpuStats
+--- PASS: TestCpuStats (0.00s)
+=== RUN   TestNoCpuStatFile
+--- PASS: TestNoCpuStatFile (0.00s)
+=== RUN   TestInvalidCpuStat
+--- PASS: TestInvalidCpuStat (0.00s)
+=== RUN   TestCpusetSetCpus
+--- PASS: TestCpusetSetCpus (0.00s)
+=== RUN   TestCpusetSetMems
+--- PASS: TestCpusetSetMems (0.00s)
+=== RUN   TestDevicesSetAllow
+--- PASS: TestDevicesSetAllow (0.00s)
+=== RUN   TestDevicesSetDeny
+--- PASS: TestDevicesSetDeny (0.00s)
+=== RUN   TestFreezerSetState
+--- PASS: TestFreezerSetState (0.00s)
+=== RUN   TestFreezerSetInvalidState
+--- PASS: TestFreezerSetInvalidState (0.00s)
+=== RUN   TestHugetlbSetHugetlb
+--- PASS: TestHugetlbSetHugetlb (0.00s)
+=== RUN   TestHugetlbStats
+--- PASS: TestHugetlbStats (0.00s)
+=== RUN   TestHugetlbStatsNoUsageFile
+--- PASS: TestHugetlbStatsNoUsageFile (0.00s)
+=== RUN   TestHugetlbStatsNoMaxUsageFile
+--- PASS: TestHugetlbStatsNoMaxUsageFile (0.00s)
+=== RUN   TestHugetlbStatsBadUsageFile
+--- PASS: TestHugetlbStatsBadUsageFile (0.00s)
+=== RUN   TestHugetlbStatsBadMaxUsageFile
+--- PASS: TestHugetlbStatsBadMaxUsageFile (0.00s)
+=== RUN   TestMemorySetMemory
+--- PASS: TestMemorySetMemory (0.00s)
+=== RUN   TestMemorySetMemoryswap
+--- PASS: TestMemorySetMemoryswap (0.00s)
+=== RUN   TestMemorySetNegativeMemoryswap
+--- PASS: TestMemorySetNegativeMemoryswap (0.00s)
+=== RUN   TestMemorySetMemoryLargerThanSwap
+--- PASS: TestMemorySetMemoryLargerThanSwap (0.00s)
+=== RUN   TestMemorySetSwapSmallerThanMemory
+--- PASS: TestMemorySetSwapSmallerThanMemory (0.00s)
+=== RUN   TestMemorySetKernelMemory
+--- PASS: TestMemorySetKernelMemory (0.00s)
+=== RUN   TestMemorySetKernelMemoryTCP
+--- PASS: TestMemorySetKernelMemoryTCP (0.00s)
+=== RUN   TestMemorySetMemorySwappinessDefault
+--- PASS: TestMemorySetMemorySwappinessDefault (0.00s)
+=== RUN   TestMemoryStats
+--- PASS: TestMemoryStats (0.00s)
+=== RUN   TestMemoryStatsNoStatFile
+--- PASS: TestMemoryStatsNoStatFile (0.00s)
+=== RUN   TestMemoryStatsNoUsageFile
+--- PASS: TestMemoryStatsNoUsageFile (0.00s)
+=== RUN   TestMemoryStatsNoMaxUsageFile
+--- PASS: TestMemoryStatsNoMaxUsageFile (0.00s)
+=== RUN   TestMemoryStatsNoLimitInBytesFile
+--- PASS: TestMemoryStatsNoLimitInBytesFile (0.00s)
+=== RUN   TestMemoryStatsBadStatFile
+--- PASS: TestMemoryStatsBadStatFile (0.00s)
+=== RUN   TestMemoryStatsBadUsageFile
+--- PASS: TestMemoryStatsBadUsageFile (0.00s)
+=== RUN   TestMemoryStatsBadMaxUsageFile
+--- PASS: TestMemoryStatsBadMaxUsageFile (0.00s)
+=== RUN   TestMemoryStatsBadLimitInBytesFile
+--- PASS: TestMemoryStatsBadLimitInBytesFile (0.00s)
+=== RUN   TestMemorySetOomControl
+--- PASS: TestMemorySetOomControl (0.00s)
+=== RUN   TestNetClsSetClassid
+--- PASS: TestNetClsSetClassid (0.00s)
+=== RUN   TestNetPrioSetIfPrio
+--- PASS: TestNetPrioSetIfPrio (0.00s)
+=== RUN   TestPidsSetMax
+--- PASS: TestPidsSetMax (0.00s)
+=== RUN   TestPidsSetUnlimited
+--- PASS: TestPidsSetUnlimited (0.00s)
+=== RUN   TestPidsStats
+--- PASS: TestPidsStats (0.00s)
+=== RUN   TestPidsStatsUnlimited
+--- PASS: TestPidsStatsUnlimited (0.00s)
+=== RUN   TestGetCgroupParamsInt
+--- PASS: TestGetCgroupParamsInt (0.00s)
+PASS
+ok  	_/go/src/github.com/opencontainers/runc/libcontainer/cgroups/fs	0.011s
+?   	_/go/src/github.com/opencontainers/runc/libcontainer/cgroups/systemd	[no test files]
+=== RUN   TestRemoveNamespace
+--- PASS: TestRemoveNamespace (0.00s)
+=== RUN   TestHostUIDNoUSERNS
+--- PASS: TestHostUIDNoUSERNS (0.00s)
+=== RUN   TestHostUIDWithUSERNS
+--- PASS: TestHostUIDWithUSERNS (0.00s)
+=== RUN   TestHostGIDNoUSERNS
+--- PASS: TestHostGIDNoUSERNS (0.00s)
+=== RUN   TestHostGIDWithUSERNS
+--- PASS: TestHostGIDWithUSERNS (0.00s)
+=== RUN   TestUnmarshalHooks
+--- PASS: TestUnmarshalHooks (0.00s)
+=== RUN   TestUnmarshalHooksWithInvalidData
+--- PASS: TestUnmarshalHooksWithInvalidData (0.00s)
+=== RUN   TestMarshalHooks
+--- PASS: TestMarshalHooks (0.00s)
+=== RUN   TestMarshalUnmarshalHooks
+--- PASS: TestMarshalUnmarshalHooks (0.00s)
+=== RUN   TestMarshalHooksWithUnexpectedType
+time="2016-06-10T17:35:00Z" level=warning msg="cannot serialize hook of type configs.FuncHook, skipping" 
+--- PASS: TestMarshalHooksWithUnexpectedType (0.00s)
+=== RUN   TestFuncHookRun
+--- PASS: TestFuncHookRun (0.00s)
+=== RUN   TestCommandHookRun
+--- PASS: TestCommandHookRun (0.00s)
+=== RUN   TestCommandHookRunTimeout
+--- PASS: TestCommandHookRunTimeout (0.01s)
+=== RUN   TestHelperProcess
+Helper Process
+ok  	_/go/src/github.com/opencontainers/runc/libcontainer/configs	0.016s
+=== RUN   TestValidate
+--- PASS: TestValidate (0.00s)
+=== RUN   TestValidateWithInvalidRootfs
+--- PASS: TestValidateWithInvalidRootfs (0.00s)
+=== RUN   TestValidateNetworkWithoutNETNamespace
+--- PASS: TestValidateNetworkWithoutNETNamespace (0.00s)
+=== RUN   TestValidateNetworkRoutesWithoutNETNamespace
+--- PASS: TestValidateNetworkRoutesWithoutNETNamespace (0.00s)
+=== RUN   TestValidateHostname
+--- PASS: TestValidateHostname (0.00s)
+=== RUN   TestValidateHostnameWithoutUTSNamespace
+--- PASS: TestValidateHostnameWithoutUTSNamespace (0.00s)
+=== RUN   TestValidateSecurityWithMaskPaths
+--- PASS: TestValidateSecurityWithMaskPaths (0.00s)
+=== RUN   TestValidateSecurityWithROPaths
+--- PASS: TestValidateSecurityWithROPaths (0.00s)
+=== RUN   TestValidateSecurityWithoutNEWNS
+--- PASS: TestValidateSecurityWithoutNEWNS (0.00s)
+=== RUN   TestValidateUsernamespace
+--- PASS: TestValidateUsernamespace (0.00s)
+=== RUN   TestValidateUsernamespaceWithoutUserNS
+--- PASS: TestValidateUsernamespaceWithoutUserNS (0.00s)
+=== RUN   TestValidateSysctl
+--- PASS: TestValidateSysctl (0.00s)
+PASS
+ok  	_/go/src/github.com/opencontainers/runc/libcontainer/configs/validate	0.002s
+?   	_/go/src/github.com/opencontainers/runc/libcontainer/criurpc	[no test files]
+=== RUN   TestDeviceFromPathLstatFailure
+--- PASS: TestDeviceFromPathLstatFailure (0.00s)
+=== RUN   TestHostDevicesIoutilReadDirFailure
+--- PASS: TestHostDevicesIoutilReadDirFailure (0.00s)
+=== RUN   TestHostDevicesIoutilReadDirDeepFailure
+--- PASS: TestHostDevicesIoutilReadDirDeepFailure (0.00s)
+PASS
+ok  	_/go/src/github.com/opencontainers/runc/libcontainer/devices	0.003s
+=== RUN   TestCheckpoint
+--- PASS: TestCheckpoint (0.52s)
+=== RUN   TestExecPS
+--- PASS: TestExecPS (0.32s)
+=== RUN   TestUsernsExecPS
+time="2016-06-10T17:35:03Z" level=warning msg="os: process already finished" 
+--- FAIL: TestUsernsExecPS (0.05s)
+	exec_test.go:49: nsenter: Unable to unshare namespaces: Invalid argument
+		nsenter: Unable to fork: Invalid argument
+		|: process_linux.go:241: running exec setns process for init caused "exit status 1"
+=== RUN   TestIPCPrivate
+--- PASS: TestIPCPrivate (0.28s)
+=== RUN   TestIPCHost
+--- PASS: TestIPCHost (0.34s)
+=== RUN   TestIPCJoinPath
+--- PASS: TestIPCJoinPath (0.31s)
+=== RUN   TestIPCBadPath
+--- PASS: TestIPCBadPath (0.02s)
+=== RUN   TestRlimit
+--- PASS: TestRlimit (0.31s)
+=== RUN   TestUsernsRlimit
+time="2016-06-10T17:35:04Z" level=warning msg="os: process already finished" 
+--- FAIL: TestUsernsRlimit (0.02s)
+	utils_test.go:48: exec_test.go:197: unexpected error: process_linux.go:241: running exec setns process for init caused "exit status 1"
+		
+=== RUN   TestEnter
+--- PASS: TestEnter (0.35s)
+=== RUN   TestProcessEnv
+--- PASS: TestProcessEnv (0.32s)
+=== RUN   TestProcessCaps
+--- PASS: TestProcessCaps (0.34s)
+=== RUN   TestAdditionalGroups
+--- PASS: TestAdditionalGroups (0.33s)
+=== RUN   TestFreeze
+--- PASS: TestFreeze (0.52s)
+=== RUN   TestSystemdFreeze
+--- SKIP: TestSystemdFreeze (0.00s)
+	exec_test.go:476: Systemd is unsupported
+=== RUN   TestCpuShares
+time="2016-06-10T17:35:07Z" level=warning msg="signal: killed" 
+--- PASS: TestCpuShares (0.31s)
+=== RUN   TestCpuSharesSystemd
+--- SKIP: TestCpuSharesSystemd (0.00s)
+	exec_test.go:551: Systemd is unsupported
+=== RUN   TestPids
+time="2016-06-10T17:35:07Z" level=warning msg="signal: killed" 
+--- SKIP: TestPids (0.32s)
+	exec_test.go:605: PIDs cgroup is unsupported
+=== RUN   TestPidsSystemd
+--- SKIP: TestPidsSystemd (0.00s)
+	exec_test.go:582: Systemd is unsupported
+=== RUN   TestRunWithKernelMemory
+--- PASS: TestRunWithKernelMemory (0.32s)
+=== RUN   TestRunWithKernelMemorySystemd
+--- SKIP: TestRunWithKernelMemorySystemd (0.00s)
+	exec_test.go:665: Systemd is unsupported
+=== RUN   TestContainerState
+--- PASS: TestContainerState (0.32s)
+=== RUN   TestPassExtraFiles
+--- PASS: TestPassExtraFiles (0.31s)
+=== RUN   TestMountCmds
+--- PASS: TestMountCmds (0.32s)
+=== RUN   TestSysctl
+--- PASS: TestSysctl (0.30s)
+=== RUN   TestMountCgroupRO
+--- PASS: TestMountCgroupRO (0.32s)
+=== RUN   TestMountCgroupRW
+--- PASS: TestMountCgroupRW (0.32s)
+=== RUN   TestOomScoreAdj
+--- PASS: TestOomScoreAdj (0.32s)
+=== RUN   TestHook
+time="2016-06-10T17:35:10Z" level=warning msg="cannot serialize hook of type configs.FuncHook, skipping" 
+time="2016-06-10T17:35:10Z" level=warning msg="cannot serialize hook of type configs.FuncHook, skipping" 
+time="2016-06-10T17:35:10Z" level=warning msg="cannot serialize hook of type configs.FuncHook, skipping" 
+time="2016-06-10T17:35:10Z" level=warning msg="cannot serialize hook of type configs.FuncHook, skipping" 
+time="2016-06-10T17:35:10Z" level=warning msg="cannot serialize hook of type configs.FuncHook, skipping" 
+time="2016-06-10T17:35:10Z" level=warning msg="cannot serialize hook of type configs.FuncHook, skipping" 
+--- PASS: TestHook (0.31s)
+=== RUN   TestSTDIOPermissions
+--- PASS: TestSTDIOPermissions (0.31s)
+=== RUN   TestRootfsPropagationSlaveMount
+--- PASS: TestRootfsPropagationSlaveMount (0.31s)
+=== RUN   TestRootfsPropagationSharedMount
+--- PASS: TestRootfsPropagationSharedMount (0.31s)
+=== RUN   TestPIDHost
+--- PASS: TestPIDHost (0.31s)
+=== RUN   TestInitJoinPID
+--- PASS: TestInitJoinPID (0.33s)
+=== RUN   TestInitJoinNetworkAndUser
+time="2016-06-10T17:35:11Z" level=warning msg="os: process already finished" 
+--- FAIL: TestInitJoinNetworkAndUser (0.01s)
+	utils_test.go:48: exec_test.go:1578: unexpected error: process_linux.go:241: running exec setns process for init caused "exit status 1"
+		
+=== RUN   TestExecIn
+--- PASS: TestExecIn (0.30s)
+=== RUN   TestExecInUsernsRlimit
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+--- FAIL: TestExecInUsernsRlimit (0.01s)
+	utils_test.go:48: execin_test.go:109: unexpected error: process_linux.go:241: running exec setns process for init caused "exit status 1"
+		
+=== RUN   TestExecInRlimit
+--- PASS: TestExecInRlimit (0.30s)
+=== RUN   TestExecInError
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+--- PASS: TestExecInError (0.50s)
+=== RUN   TestExecInTTY
+--- PASS: TestExecInTTY (0.13s)
+=== RUN   TestExecInEnvironment
+--- PASS: TestExecInEnvironment (0.29s)
+=== RUN   TestExecinPassExtraFiles
+--- PASS: TestExecinPassExtraFiles (0.32s)
+=== RUN   TestExecInOomScoreAdj
+--- PASS: TestExecInOomScoreAdj (0.30s)
+=== RUN   TestExecInUserns
+time="2016-06-10T17:35:14Z" level=warning msg="os: process already finished" 
+--- FAIL: TestExecInUserns (0.01s)
+	utils_test.go:48: execin_test.go:462: unexpected error: process_linux.go:241: running exec setns process for init caused "exit status 1"
+		
+=== RUN   TestSeccompDenyGetcwd
+--- PASS: TestSeccompDenyGetcwd (0.30s)
+=== RUN   TestSeccompPermitWriteConditional
+--- PASS: TestSeccompPermitWriteConditional (0.30s)
+=== RUN   TestSeccompDenyWriteConditional
+--- PASS: TestSeccompDenyWriteConditional (0.32s)
+FAIL
+FAIL	_/go/src/github.com/opencontainers/runc/libcontainer/integration	12.168s
+?   	_/go/src/github.com/opencontainers/runc/libcontainer/keys	[no test files]
+?   	_/go/src/github.com/opencontainers/runc/libcontainer/label	[no test files]
+=== RUN   TestNsenterValidPaths
+--- PASS: TestNsenterValidPaths (0.03s)
+=== RUN   TestNsenterInvalidPaths
+--- PASS: TestNsenterInvalidPaths (0.01s)
+PASS
+ok  	_/go/src/github.com/opencontainers/runc/libcontainer/nsenter	0.041s
+=== RUN   TestParseStatusFile
+--- PASS: TestParseStatusFile (0.00s)
+PASS
+ok  	_/go/src/github.com/opencontainers/runc/libcontainer/seccomp	0.002s
+?   	_/go/src/github.com/opencontainers/runc/libcontainer/selinux	[no test files]
+=== RUN   TestLinuxCgroupsPathSpecified
+--- PASS: TestLinuxCgroupsPathSpecified (0.00s)
+=== RUN   TestLinuxCgroupsPathNotSpecified
+--- PASS: TestLinuxCgroupsPathNotSpecified (0.00s)
+PASS
+ok  	_/go/src/github.com/opencontainers/runc/libcontainer/specconv	0.002s
+=== RUN   TestCaptureTestFunc
+--- PASS: TestCaptureTestFunc (0.00s)
+=== RUN   TestParsePackageName
+--- PASS: TestParsePackageName (0.00s)
+PASS
+ok  	_/go/src/github.com/opencontainers/runc/libcontainer/stacktrace	0.003s
+?   	_/go/src/github.com/opencontainers/runc/libcontainer/system	[no test files]
+=== RUN   TestUserParseLine
+--- PASS: TestUserParseLine (0.00s)
+=== RUN   TestUserParsePasswd
+--- PASS: TestUserParsePasswd (0.00s)
+=== RUN   TestUserParseGroup
+--- PASS: TestUserParseGroup (0.00s)
+=== RUN   TestValidGetExecUser
+--- PASS: TestValidGetExecUser (0.00s)
+=== RUN   TestInvalidGetExecUser
+--- PASS: TestInvalidGetExecUser (0.00s)
+=== RUN   TestGetExecUserNilSources
+--- PASS: TestGetExecUserNilSources (0.00s)
+=== RUN   TestGetAdditionalGroups
+--- PASS: TestGetAdditionalGroups (0.00s)
+=== RUN   TestGetAdditionalGroupsNumeric
+--- PASS: TestGetAdditionalGroupsNumeric (0.00s)
+PASS
+ok  	_/go/src/github.com/opencontainers/runc/libcontainer/user	0.002s
+=== RUN   TestGenerateName
+--- PASS: TestGenerateName (0.00s)
+=== RUN   TestSearchLabels
+--- PASS: TestSearchLabels (0.00s)
+=== RUN   TestResolveRootfs
+--- PASS: TestResolveRootfs (0.00s)
+=== RUN   TestResolveRootfsWithSymlink
+--- PASS: TestResolveRootfsWithSymlink (0.00s)
+=== RUN   TestResolveRootfsWithNonExistingDir
+--- PASS: TestResolveRootfsWithNonExistingDir (0.00s)
+=== RUN   TestExitStatus
+--- PASS: TestExitStatus (0.00s)
+=== RUN   TestExitStatusSignaled
+--- PASS: TestExitStatusSignaled (0.00s)
+=== RUN   TestWriteJSON
+--- PASS: TestWriteJSON (0.00s)
+=== RUN   TestCleanPath
+--- PASS: TestCleanPath (0.00s)
+PASS
+ok  	_/go/src/github.com/opencontainers/runc/libcontainer/utils	0.002s
+=== RUN   TestXattr
+--- PASS: TestXattr (0.00s)
+	xattr_test.go:26: Success
+	xattr_test.go:41: Success
+	xattr_test.go:60: Success
+	xattr_test.go:72: Success
+	xattr_test.go:77: Success
+PASS
+ok  	_/go/src/github.com/opencontainers/runc/libcontainer/xattr	0.002s
+Makefile:60: recipe for target 'localunittest' failed
+make: *** [localunittest] Error 1
+make[1]: *** [unittest] Error 2
+make[1]: Leaving directory `/home/hmeng/go/src/github.com/opencontainers/runc'
+make: *** [test] Error 2

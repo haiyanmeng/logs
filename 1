@@ -1,0 +1,37 @@
+   
+There are 5 failures in the unit test:
+
+    === RUN   TestUsernsExecPS
+    time="2016-06-10T17:35:03Z" level=warning msg="os: process already finished" 
+    --- FAIL: TestUsernsExecPS (0.05s)
+    	exec_test.go:49: nsenter: Unable to unshare namespaces: Invalid argument
+    		nsenter: Unable to fork: Invalid argument
+    		|: process_linux.go:241: running exec setns process for init caused "exit status 1"
+    
+    === RUN   TestUsernsRlimit
+    time="2016-06-10T17:35:04Z" level=warning msg="os: process already finished" 
+    --- FAIL: TestUsernsRlimit (0.02s)
+    	utils_test.go:48: exec_test.go:197: unexpected error: process_linux.go:241: running exec setns process for init caused "exit status 1"
+    	
+    --- FAIL: TestInitJoinNetworkAndUser (0.01s)
+    	utils_test.go:48: exec_test.go:1578: unexpected error: process_linux.go:241: running exec setns process for init caused "exit status 1"
+    
+    === RUN   TestExecInUsernsRlimit
+    time="2016-06-10T17:35:12Z" level=warning msg="os: process already finished" 
+    --- FAIL: TestExecInUsernsRlimit (0.01s)
+    	utils_test.go:48: execin_test.go:109: unexpected error: process_linux.go:241: running exec setns process for init caused "exit status 1"
+    
+    === RUN   TestExecInUserns
+    time="2016-06-10T17:35:14Z" level=warning msg="os: process already finished" 
+    --- FAIL: TestExecInUserns (0.01s)
+    	utils_test.go:48: execin_test.go:462: unexpected error: process_linux.go:241: running exec setns process for init caused "exit status 1"
+	
+
+	
+test 15 in bats failed:
+
+    not ok 15 runc exec
+    # (in test file tests/integration/exec.bats, line 24)
+    #   `[[ "${output}" == *"Hello from exec"* ]]' failed
+    # text echoed = ''
+

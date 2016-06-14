@@ -1,0 +1,2338 @@
+27841 execve("/usr/bin/docker", ["docker", "run", "-e", "TESTFLAGS", "-ti", "--privileged", "--rm", "-v", "/home/hmeng/go/src/github.com/hm"..., "runc_test", "make", "localunittest"], [/* 47 vars */]) = 0
+27841 brk(0)                            = 0x3bb5000
+27841 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb1610fb000
+27841 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+27841 open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+27841 fstat(3, {st_mode=S_IFREG|0644, st_size=73647, ...}) = 0
+27841 mmap(NULL, 73647, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fb1610e9000
+27841 close(3)                          = 0
+27841 open("/lib64/libsystemd.so.0", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=162560, ...}) = 0
+27841 mmap(NULL, 162596, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb1610c1000
+27841 mmap(0x7fb1610e7000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x25000) = 0x7fb1610e7000
+27841 close(3)                          = 0
+27841 open("/lib64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240l\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=142304, ...}) = 0
+27841 mmap(NULL, 2208864, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb160cbf000
+27841 mprotect(0x7fb160cd5000, 2097152, PROT_NONE) = 0
+27841 mmap(0x7fb160ed5000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x16000) = 0x7fb160ed5000
+27841 mmap(0x7fb160ed7000, 13408, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb160ed7000
+27841 close(3)                          = 0
+27841 open("/lib64/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320\16\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=19520, ...}) = 0
+27841 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb1610c0000
+27841 mmap(NULL, 2109744, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb160abb000
+27841 mprotect(0x7fb160abe000, 2093056, PROT_NONE) = 0
+27841 mmap(0x7fb160cbd000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fb160cbd000
+27841 close(3)                          = 0
+27841 open("/lib64/libdevmapper.so.1.02", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360\245\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0555, st_size=367360, ...}) = 0
+27841 mmap(NULL, 2461768, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb160861000
+27841 mprotect(0x7fb1608b5000, 2097152, PROT_NONE) = 0
+27841 mmap(0x7fb160ab5000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x54000) = 0x7fb160ab5000
+27841 mmap(0x7fb160ab9000, 4168, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb160ab9000
+27841 close(3)                          = 0
+27841 open("/lib64/libltdl.so.7", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260$\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=41248, ...}) = 0
+27841 mmap(NULL, 2134728, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb160657000
+27841 mprotect(0x7fb160660000, 2093056, PROT_NONE) = 0
+27841 mmap(0x7fb16085f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8000) = 0x7fb16085f000
+27841 close(3)                          = 0
+27841 open("/lib64/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \34\2\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=2112384, ...}) = 0
+27841 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb1610bf000
+27841 mmap(NULL, 3936832, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb160295000
+27841 mprotect(0x7fb16044c000, 2097152, PROT_NONE) = 0
+27841 mmap(0x7fb16064c000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b7000) = 0x7fb16064c000
+27841 mmap(0x7fb160652000, 16960, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb160652000
+27841 close(3)                          = 0
+27841 open("/lib64/libcap.so.2", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \26\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=20024, ...}) = 0
+27841 mmap(NULL, 2114112, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb160090000
+27841 mprotect(0x7fb160094000, 2093056, PROT_NONE) = 0
+27841 mmap(0x7fb160293000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fb160293000
+27841 close(3)                          = 0
+27841 open("/lib64/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260T\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=1141560, ...}) = 0
+27841 mmap(NULL, 3150168, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb15fd8e000
+27841 mprotect(0x7fb15fe8f000, 2093056, PROT_NONE) = 0
+27841 mmap(0x7fb16008e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x100000) = 0x7fb16008e000
+27841 close(3)                          = 0
+27841 open("/lib64/librt.so.1", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300\"\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=44096, ...}) = 0
+27841 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb1610be000
+27841 mmap(NULL, 2128952, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb15fb86000
+27841 mprotect(0x7fb15fb8d000, 2093056, PROT_NONE) = 0
+27841 mmap(0x7fb15fd8c000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7fb15fd8c000
+27841 close(3)                          = 0
+27841 open("/lib64/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240d\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=147096, ...}) = 0
+27841 mmap(NULL, 2246808, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb15f961000
+27841 mprotect(0x7fb15f982000, 2097152, PROT_NONE) = 0
+27841 mmap(0x7fb15fb82000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x21000) = 0x7fb15fb82000
+27841 mmap(0x7fb15fb84000, 6296, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb15fb84000
+27841 close(3)                          = 0
+27841 open("/lib64/liblzma.so.5", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000/\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=153192, ...}) = 0
+27841 mmap(NULL, 2245240, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb15f73c000
+27841 mprotect(0x7fb15f760000, 2093056, PROT_NONE) = 0
+27841 mmap(0x7fb15f95f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x23000) = 0x7fb15f95f000
+27841 close(3)                          = 0
+27841 open("/lib64/libgcrypt.so.11", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0u\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=534488, ...}) = 0
+27841 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb1610bd000
+27841 mmap(NULL, 2621456, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb15f4bb000
+27841 mprotect(0x7fb15f537000, 2097152, PROT_NONE) = 0
+27841 mmap(0x7fb15f737000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x7c000) = 0x7fb15f737000
+27841 mmap(0x7fb15f73b000, 16, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb15f73b000
+27841 close(3)                          = 0
+27841 open("/lib64/libgpg-error.so.0", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\n\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=19384, ...}) = 0
+27841 mmap(NULL, 2113656, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb15f2b6000
+27841 mprotect(0x7fb15f2ba000, 2093056, PROT_NONE) = 0
+27841 mmap(0x7fb15f4b9000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fb15f4b9000
+27841 close(3)                          = 0
+27841 open("/lib64/libresolv.so.2", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0@:\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=110808, ...}) = 0
+27841 mmap(NULL, 2202264, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb15f09c000
+27841 mprotect(0x7fb15f0b2000, 2097152, PROT_NONE) = 0
+27841 mmap(0x7fb15f2b2000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x16000) = 0x7fb15f2b2000
+27841 mmap(0x7fb15f2b4000, 6808, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb15f2b4000
+27841 close(3)                          = 0
+27841 open("/lib64/libdw.so.1", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200\227\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=297464, ...}) = 0
+27841 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb1610bc000
+27841 mmap(NULL, 2386184, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb15ee55000
+27841 mprotect(0x7fb15ee9a000, 2093056, PROT_NONE) = 0
+27841 mmap(0x7fb15f099000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x44000) = 0x7fb15f099000
+27841 close(3)                          = 0
+27841 open("/lib64/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360*\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=88720, ...}) = 0
+27841 mmap(NULL, 2184192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb15ec3f000
+27841 mprotect(0x7fb15ec54000, 2093056, PROT_NONE) = 0
+27841 mmap(0x7fb15ee53000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14000) = 0x7fb15ee53000
+27841 close(3)                          = 0
+27841 open("/lib64/libsepol.so.1", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360@\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=288296, ...}) = 0
+27841 mmap(NULL, 2378824, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb15e9fa000
+27841 mprotect(0x7fb15ea3e000, 2093056, PROT_NONE) = 0
+27841 mmap(0x7fb15ec3d000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x43000) = 0x7fb15ec3d000
+27841 close(3)                          = 0
+27841 open("/lib64/libudev.so.1", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=83192, ...}) = 0
+27841 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb1610bb000
+27841 mmap(NULL, 84225, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb1610a6000
+27841 mprotect(0x7fb1610b8000, 4096, PROT_NONE) = 0
+27841 mmap(0x7fb1610b9000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x12000) = 0x7fb1610b9000
+27841 close(3)                          = 0
+27841 open("/lib64/libattr.so.1", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320\23\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=19888, ...}) = 0
+27841 mmap(NULL, 2113904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb15e7f5000
+27841 mprotect(0x7fb15e7f9000, 2093056, PROT_NONE) = 0
+27841 mmap(0x7fb15e9f8000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fb15e9f8000
+27841 close(3)                          = 0
+27841 open("/lib64/libpcre.so.1", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360\25\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=398264, ...}) = 0
+27841 mmap(NULL, 2490888, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb15e594000
+27841 mprotect(0x7fb15e5f4000, 2093056, PROT_NONE) = 0
+27841 mmap(0x7fb15e7f3000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x5f000) = 0x7fb15e7f3000
+27841 close(3)                          = 0
+27841 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb1610a5000
+27841 open("/usr/lib64/elfutils/tls/x86_64/libelf.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+27841 stat("/usr/lib64/elfutils/tls/x86_64", 0x7ffde4024ec0) = -1 ENOENT (No such file or directory)
+27841 open("/usr/lib64/elfutils/tls/libelf.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+27841 stat("/usr/lib64/elfutils/tls", 0x7ffde4024ec0) = -1 ENOENT (No such file or directory)
+27841 open("/usr/lib64/elfutils/x86_64/libelf.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+27841 stat("/usr/lib64/elfutils/x86_64", 0x7ffde4024ec0) = -1 ENOENT (No such file or directory)
+27841 open("/usr/lib64/elfutils/libelf.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+27841 stat("/usr/lib64/elfutils", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+27841 open("/lib64/libelf.so.1", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0p+\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=91496, ...}) = 0
+27841 mmap(NULL, 2183520, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb15e37e000
+27841 mprotect(0x7fb15e393000, 2093056, PROT_NONE) = 0
+27841 mmap(0x7fb15e592000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14000) = 0x7fb15e592000
+27841 close(3)                          = 0
+27841 open("/usr/lib64/elfutils/libbz2.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+27841 open("/lib64/libbz2.so.1", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`\27\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=68192, ...}) = 0
+27841 mmap(NULL, 2162024, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb15e16e000
+27841 mprotect(0x7fb15e17d000, 2093056, PROT_NONE) = 0
+27841 mmap(0x7fb15e37c000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000) = 0x7fb15e37c000
+27841 close(3)                          = 0
+27841 open("/usr/lib64/elfutils/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+27841 open("/lib64/libz.so.1", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0p!\0\0\0\0\0\0"..., 832) = 832
+27841 fstat(3, {st_mode=S_IFREG|0755, st_size=90632, ...}) = 0
+27841 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb1610a4000
+27841 mmap(NULL, 2183688, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb15df58000
+27841 mprotect(0x7fb15df6d000, 2093056, PROT_NONE) = 0
+27841 mmap(0x7fb15e16c000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14000) = 0x7fb15e16c000
+27841 close(3)                          = 0
+27841 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb1610a3000
+27841 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb1610a2000
+27841 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb1610a0000
+27841 arch_prctl(ARCH_SET_FS, 0x7fb1610a0880) = 0
+27841 mprotect(0x7fb16064c000, 16384, PROT_READ) = 0
+27841 mprotect(0x7fb15e16c000, 4096, PROT_READ) = 0
+27841 mprotect(0x7fb15e37c000, 4096, PROT_READ) = 0
+27841 mprotect(0x7fb15e592000, 4096, PROT_READ) = 0
+27841 mprotect(0x7fb160ed5000, 4096, PROT_READ) = 0
+27841 mprotect(0x7fb15e7f3000, 4096, PROT_READ) = 0
+27841 mprotect(0x7fb15e9f8000, 4096, PROT_READ) = 0
+27841 mprotect(0x7fb160cbd000, 4096, PROT_READ) = 0
+27841 mprotect(0x7fb160293000, 4096, PROT_READ) = 0
+27841 mprotect(0x7fb16008e000, 4096, PROT_READ) = 0
+27841 mprotect(0x7fb15fd8c000, 4096, PROT_READ) = 0
+27841 mprotect(0x7fb15f95f000, 4096, PROT_READ) = 0
+27841 mprotect(0x7fb15f099000, 8192, PROT_READ) = 0
+27841 mprotect(0x7fb15ee53000, 4096, PROT_READ) = 0
+27841 stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7ffde40259c0) = -1 ENOENT (No such file or directory)
+27841 mprotect(0x7fb1610b9000, 4096, PROT_READ) = 0
+27841 mprotect(0x7fb15ec3d000, 4096, PROT_READ) = 0
+27841 mprotect(0x7fb15f2b2000, 4096, PROT_READ) = 0
+27841 mprotect(0x7fb15f4b9000, 4096, PROT_READ) = 0
+27841 mprotect(0x7fb15f737000, 4096, PROT_READ) = 0
+27841 mprotect(0x7fb15fb82000, 4096, PROT_READ) = 0
+27841 mprotect(0x7fb16085f000, 4096, PROT_READ) = 0
+27841 mprotect(0x7fb160ab5000, 4096, PROT_READ) = 0
+27841 mprotect(0x7fb1610e7000, 4096, PROT_READ) = 0
+27841 mprotect(0x21ae000, 8192, PROT_READ) = 0
+27841 mprotect(0x7fb1610fc000, 4096, PROT_READ) = 0
+27841 munmap(0x7fb1610e9000, 73647)     = 0
+27841 set_tid_address(0x7fb1610a0b50)   = 27841
+27841 set_robust_list(0x7fb1610a0b60, 24) = 0
+27841 rt_sigaction(SIGRTMIN, {0x7fb160cc5780, [], SA_RESTORER|SA_SIGINFO, 0x7fb160cce100}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_1, {0x7fb160cc5810, [], SA_RESTORER|SA_RESTART|SA_SIGINFO, 0x7fb160cce100}, NULL, 8) = 0
+27841 rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+27841 getrlimit(RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+27841 brk(0)                            = 0x3bb5000
+27841 brk(0x3bd6000)                    = 0x3bd6000
+27841 access("/etc/system-fips", F_OK)  = -1 ENOENT (No such file or directory)
+27841 statfs("/sys/fs/selinux", {f_type=0xf97cff8c, f_bsize=4096, f_blocks=0, f_bfree=0, f_bavail=0, f_files=0, f_ffree=0, f_fsid={0, 0}, f_namelen=255, f_frsize=4096}) = 0
+27841 statfs("/sys/fs/selinux", {f_type=0xf97cff8c, f_bsize=4096, f_blocks=0, f_bfree=0, f_bavail=0, f_files=0, f_ffree=0, f_fsid={0, 0}, f_namelen=255, f_frsize=4096}) = 0
+27841 stat("/sys/fs/selinux", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+27841 sched_getaffinity(0, 8192, {3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...}) = 640
+27841 mmap(0xc000000000, 65536, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xc000000000
+27841 munmap(0xc000000000, 65536)       = 0
+27841 mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb161060000
+27841 mmap(0xc820000000, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xc820000000
+27841 mmap(0xc81fff8000, 32768, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xc81fff8000
+27841 mmap(0xc000000000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xc000000000
+27841 mmap(NULL, 65536, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb1610eb000
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 348336309}) = 0
+27841 mmap(NULL, 1439992, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb160f00000
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 348461003}) = 0
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 348475571}) = 0
+27841 sigaltstack({ss_sp=0xc820002000, ss_flags=0, ss_size=32672}, NULL) = 0
+27841 gettid()                          = 27841
+27841 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+27841 rt_sigaction(SIGHUP, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGHUP, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGHUP, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGINT, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGINT, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGINT, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGQUIT, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGQUIT, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGILL, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGILL, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGTRAP, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGTRAP, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGABRT, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGABRT, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGBUS, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGBUS, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGFPE, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGFPE, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGUSR1, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGUSR1, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGSEGV, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGSEGV, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGUSR2, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGUSR2, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGPIPE, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGPIPE, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGALRM, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGALRM, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGTERM, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGTERM, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGSTKFLT, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGSTKFLT, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGCHLD, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGCHLD, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGURG, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGURG, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGXCPU, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGXCPU, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGXFSZ, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGXFSZ, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGVTALRM, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGVTALRM, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGPROF, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGPROF, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGWINCH, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGWINCH, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGIO, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGIO, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGPWR, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGPWR, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGSYS, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGSYS, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRTMIN, NULL, {0x7fb160cc5780, [], SA_RESTORER|SA_SIGINFO, 0x7fb160cce100}, 8) = 0
+27841 rt_sigaction(SIGRTMIN, NULL, {0x7fb160cc5780, [], SA_RESTORER|SA_SIGINFO, 0x7fb160cce100}, 8) = 0
+27841 rt_sigaction(SIGRTMIN, {0x7fb160cc5780, [], SA_RESTORER|SA_STACK|SA_SIGINFO, 0x7fb160cce100}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_1, NULL, {0x7fb160cc5810, [], SA_RESTORER|SA_RESTART|SA_SIGINFO, 0x7fb160cce100}, 8) = 0
+27841 rt_sigaction(SIGRT_1, NULL, {0x7fb160cc5810, [], SA_RESTORER|SA_RESTART|SA_SIGINFO, 0x7fb160cce100}, 8) = 0
+27841 rt_sigaction(SIGRT_1, {0x7fb160cc5810, [], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x7fb160cce100}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_2, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_2, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_3, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_3, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_4, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_4, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_5, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_5, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_6, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_6, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_7, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_7, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_8, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_8, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_9, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_9, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_10, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_10, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_11, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_11, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_12, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_12, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_13, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_13, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_14, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_14, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_15, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_15, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_16, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_16, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_17, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_17, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_18, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_18, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_19, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_19, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_20, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_20, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_21, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_21, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_22, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_22, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_23, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_23, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_24, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_24, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_25, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_25, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_26, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_26, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_27, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_27, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_28, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_28, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_29, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_29, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_30, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_30, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_31, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_31, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 rt_sigaction(SIGRT_32, NULL, {SIG_DFL, [], 0}, 8) = 0
+27841 rt_sigaction(SIGRT_32, {0x476ef0, ~[], SA_RESTORER|SA_STACK|SA_RESTART|SA_SIGINFO, 0x476f10}, NULL, 8) = 0
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 350099912}) = 0
+27841 rt_sigprocmask(SIG_SETMASK, NULL, [], 8) = 0
+27841 rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], [], 8) = 0
+27841 mmap(NULL, 8392704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fb15d757000
+27841 mprotect(0x7fb15d757000, 4096, PROT_NONE) = 0
+27841 clone(child_stack=0x7fb15df56e70, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fb15df579d0, tls=0x7fb15df57700, child_tidptr=0x7fb15df579d0) = 27842
+27841 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+27841 mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb15d717000
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 350262267}) = 0
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 350275982}) = 0
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 350287692}) = 0
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 350299201}) = 0
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 350310851}) = 0
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 350322372}) = 0
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 350334053}) = 0
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 350345471}) = 0
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 350356944}) = 0
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 350368434}) = 0
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 350379868}) = 0
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 350391322}) = 0
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 350402792}) = 0
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 350414199}) = 0
+27841 rt_sigprocmask(SIG_SETMASK, NULL, [], 8) = 0
+27841 rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], [], 8) = 0
+27841 mmap(NULL, 8392704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fb15cf16000
+27841 mprotect(0x7fb15cf16000, 4096, PROT_NONE) = 0
+27841 clone(child_stack=0x7fb15d715e70, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fb15d7169d0, tls=0x7fb15d716700, child_tidptr=0x7fb15d7169d0) = 27843
+27841 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+27841 rt_sigprocmask(SIG_SETMASK, NULL, [], 8) = 0
+27841 rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], [], 8) = 0
+27841 mmap(NULL, 8392704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fb15c715000
+27841 mprotect(0x7fb15c715000, 4096, PROT_NONE) = 0
+27841 clone(child_stack=0x7fb15cf14e70, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fb15cf159d0, tls=0x7fb15cf15700, child_tidptr=0x7fb15cf159d0) = 27844
+27841 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27844 set_robust_list(0x7fb15cf159e0, 24) = 0
+27844 sigaltstack({ss_sp=0xc820058000, ss_flags=0, ss_size=32672}, NULL) = 0
+27844 gettid()                          = 27844
+27844 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+27844 futex(0x21ef2b0, FUTEX_WAKE, 1 <unfinished ...>
+27841 <... futex resumed> )             = 0
+27841 openat(AT_FDCWD, "/proc/sys/net/core/somaxconn", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "128\n", 4096)            = 4
+27841 read(3, "", 4092)                 = 0
+27841 close(3)                          = 0
+27841 socket(PF_INET, SOCK_STREAM, IPPROTO_TCP) = 3
+27841 close(3)                          = 0
+27841 socket(PF_INET6, SOCK_STREAM, IPPROTO_TCP) = 3
+27841 setsockopt(3, SOL_IPV6, IPV6_V6ONLY, [1], 4) = 0
+27841 bind(3, {sa_family=AF_INET6, sin6_port=htons(0), inet_pton(AF_INET6, "::1", &sin6_addr), sin6_flowinfo=0, sin6_scope_id=0}, 28) = 0
+27841 socket(PF_INET6, SOCK_STREAM, IPPROTO_TCP) = 4
+27841 setsockopt(4, SOL_IPV6, IPV6_V6ONLY, [0], 4) = 0
+27841 bind(4, {sa_family=AF_INET6, sin6_port=htons(0), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_flowinfo=0, sin6_scope_id=0}, 28) = 0
+27841 close(4)                          = 0
+27841 close(3)                          = 0
+27841 clock_gettime(CLOCK_REALTIME, {1465925457, 135651288}) = 0
+27841 ioctl(2, SNDCTL_TMR_TIMEBASE or SNDRV_TIMER_IOCTL_NEXT_DEVICE or TCGETS, {B38400 opost isig icanon echo ...}) = 0
+27841 stat("/usr/local/bin/adduser", 0xc820080120) = -1 ENOENT (No such file or directory)
+27841 stat("/usr/local/sbin/adduser", 0xc8200801b0) = -1 ENOENT (No such file or directory)
+27841 stat("/usr/bin/adduser", 0xc820080240) = -1 ENOENT (No such file or directory)
+27841 stat("/usr/sbin/adduser", {st_mode=S_IFREG|0750, st_size=114064, ...}) = 0
+27841 lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+27841 lstat("/usr/sbin", {st_mode=S_IFDIR|0555, st_size=20480, ...}) = 0
+27841 lstat("/usr/sbin/adduser", {st_mode=S_IFLNK|0777, st_size=7, ...}) = 0
+27841 readlinkat(AT_FDCWD, "/usr/sbin/adduser", "useradd", 128) = 7
+27841 lstat("/usr/sbin/useradd", {st_mode=S_IFREG|0750, st_size=114064, ...}) = 0
+27841 stat("/usr/local/bin/useradd", 0xc8200805a0) = -1 ENOENT (No such file or directory)
+27841 stat("/usr/local/sbin/useradd", 0xc820080630) = -1 ENOENT (No such file or directory)
+27841 stat("/usr/bin/useradd", 0xc8200806c0) = -1 ENOENT (No such file or directory)
+27841 stat("/usr/sbin/useradd", {st_mode=S_IFREG|0750, st_size=114064, ...}) = 0
+27841 lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+27841 lstat("/usr/sbin", {st_mode=S_IFDIR|0555, st_size=20480, ...}) = 0
+27841 lstat("/usr/sbin/useradd", {st_mode=S_IFREG|0750, st_size=114064, ...}) = 0
+27841 syscall_318(0xc82004babf, 0x1, 0x1, 0, 0, 0) = -1 (errno 38)
+27841 openat(AT_FDCWD, "/dev/urandom", O_RDONLY|O_CLOEXEC) = 3
+27841 read(3, "\3724\307<\276\v\311].H\252\212\t\272\221\267\34\205\204`\372\10_\313\177\312\352\35\216Qr|"..., 4096) = 4096
+27841 mmap(0xc820100000, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xc820100000
+27841 mmap(0xc81fff0000, 32768, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xc81fff0000
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 354494660}) = 0
+27841 rt_sigprocmask(SIG_SETMASK, NULL, [], 8) = 0
+27841 rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], [], 8) = 0
+27841 mmap(NULL, 8392704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fb15bf14000
+27841 mprotect(0x7fb15bf14000, 4096, PROT_NONE) = 0
+27841 clone(child_stack=0x7fb15c713e70, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fb15c7149d0, tls=0x7fb15c714700, child_tidptr=0x7fb15c7149d0) = 27845
+27841 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27844 <... futex resumed> )             = 1
+27844 futex(0xc82002ce90, FUTEX_WAIT, 0, NULL <unfinished ...>
+27843 set_robust_list(0x7fb15d7169e0, 24) = 0
+27843 sigaltstack({ss_sp=0xc82004e000, ss_flags=0, ss_size=32672}, NULL) = 0
+27843 gettid()                          = 27843
+27843 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+27843 select(0, NULL, NULL, NULL, {0, 100} <unfinished ...>
+27842 set_robust_list(0x7fb15df579e0, 24) = 0
+27842 sigaltstack({ss_sp=0xc82003e000, ss_flags=0, ss_size=32672}, NULL) = 0
+27842 gettid()                          = 27842
+27842 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 354829644}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27843 <... select resumed> )            = 0 (Timeout)
+27843 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 1
+27841 <... futex resumed> )             = 0
+27841 mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb15bed4000
+27841 futex(0xc82002ce90, FUTEX_WAKE, 1) = 1
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27844 <... futex resumed> )             = 0
+27844 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 1
+27841 <... futex resumed> )             = 0
+27841 rt_sigprocmask(SIG_SETMASK, NULL, [], 8) = 0
+27841 rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], [], 8) = 0
+27841 mmap(NULL, 8392704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fb15b6d3000
+27841 mprotect(0x7fb15b6d3000, 4096, PROT_NONE) = 0
+27841 clone(child_stack=0x7fb15bed2e70, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fb15bed39d0, tls=0x7fb15bed3700, child_tidptr=0x7fb15bed39d0) = 27846
+27841 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27844 futex(0xc82002ce90, FUTEX_WAIT, 0, NULL <unfinished ...>
+27843 futex(0xc82002ca10, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 355198996}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 139202295}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27845 set_robust_list(0x7fb15c7149e0, 24) = 0
+27845 sigaltstack({ss_sp=0xc8200fa000, ss_flags=0, ss_size=32672}, NULL) = 0
+27845 gettid()                          = 27845
+27845 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+27845 select(0, NULL, NULL, NULL, {0, 100} <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 355334370}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 139337446}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27846 set_robust_list(0x7fb15bed39e0, 24) = 0
+27846 sigaltstack({ss_sp=0xc82010e000, ss_flags=0, ss_size=32672}, NULL) = 0
+27846 gettid()                          = 27846
+27846 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+27846 futex(0x21ef2b0, FUTEX_WAKE, 1 <unfinished ...>
+27841 <... futex resumed> )             = 0
+27841 futex(0xc82002ca10, FUTEX_WAKE, 1) = 1
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27843 <... futex resumed> )             = 0
+27843 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 1
+27841 <... futex resumed> )             = 0
+27841 futex(0xc82002ce90, FUTEX_WAKE, 1 <unfinished ...>
+27844 <... futex resumed> )             = 0
+27841 <... futex resumed> )             = 1
+27844 futex(0x21ef2b0, FUTEX_WAKE, 1 <unfinished ...>
+27841 rt_sigprocmask(SIG_SETMASK, NULL,  <unfinished ...>
+27844 <... futex resumed> )             = 0
+27841 <... rt_sigprocmask resumed> [], 8) = 0
+27844 futex(0xc82002ce90, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], [], 8) = 0
+27841 mmap(NULL, 8392704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fb15aed2000
+27841 mprotect(0x7fb15aed2000, 4096, PROT_NONE) = 0
+27841 clone(child_stack=0x7fb15b6d1e70, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fb15b6d29d0, tls=0x7fb15b6d2700, child_tidptr=0x7fb15b6d29d0) = 27847
+27841 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27843 futex(0xc82002ca10, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 355697156}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 139700742}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27845 <... select resumed> )            = 0 (Timeout)
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1 <unfinished ...>
+27841 <... futex resumed> )             = 0
+27841 futex(0xc82002ca10, FUTEX_WAKE, 1) = 1
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27843 <... futex resumed> )             = 0
+27843 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 1
+27841 <... futex resumed> )             = 0
+27841 futex(0xc82002ce90, FUTEX_WAKE, 1 <unfinished ...>
+27844 <... futex resumed> )             = 0
+27841 <... futex resumed> )             = 1
+27844 futex(0x21ef2b0, FUTEX_WAKE, 1 <unfinished ...>
+27841 rt_sigprocmask(SIG_SETMASK, NULL,  <unfinished ...>
+27844 <... futex resumed> )             = 0
+27841 <... rt_sigprocmask resumed> [], 8) = 0
+27844 futex(0xc82002ce90, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], [], 8) = 0
+27841 mmap(NULL, 8392704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fb15a6d1000
+27841 mprotect(0x7fb15a6d1000, 4096, PROT_NONE) = 0
+27841 clone(child_stack=0x7fb15aed0e70, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fb15aed19d0, tls=0x7fb15aed1700, child_tidptr=0x7fb15aed19d0) = 27848
+27841 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27843 futex(0xc82002ca10, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 356011304}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 140036049}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27845 <... futex resumed> )             = 1
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27846 <... futex resumed> )             = 1
+27846 futex(0xc82010a110, FUTEX_WAIT, 0, NULL <unfinished ...>
+27848 set_robust_list(0x7fb15aed19e0, 24) = 0
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 356150635}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 140154128}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27848 sigaltstack({ss_sp=0xc820124000, ss_flags=0, ss_size=32672}, NULL) = 0
+27848 gettid()                          = 27848
+27848 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+27848 futex(0x21ef2b0, FUTEX_WAKE, 1 <unfinished ...>
+27841 <... futex resumed> )             = 0
+27841 futex(0xc82010a110, FUTEX_WAKE, 1) = 1
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 356280420}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 140283987}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27846 <... futex resumed> )             = 0
+27846 futex(0x21ef2b0, FUTEX_WAKE, 1 <unfinished ...>
+27841 <... futex resumed> )             = 0
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1 <unfinished ...>
+27841 <... futex resumed> )             = 0
+27841 futex(0xc82002ca10, FUTEX_WAKE, 1 <unfinished ...>
+27843 <... futex resumed> )             = 0
+27841 <... futex resumed> )             = 1
+27843 futex(0x21ef2b0, FUTEX_WAKE, 1 <unfinished ...>
+27841 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27843 <... futex resumed> )             = 0
+27843 futex(0xc82002ca10, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 <... clock_gettime resumed> {11591, 356945265}) = 0
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 357182046}) = 0
+27841 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 357633182}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 141637107}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 <... clock_gettime resumed> {11591, 357671697}) = 0
+27847 set_robust_list(0x7fb15b6d29e0, 24) = 0
+27847 sigaltstack({ss_sp=0xc82011c000, ss_flags=0, ss_size=32672}, NULL) = 0
+27847 gettid()                          = 27847
+27847 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+27847 select(0, NULL, NULL, NULL, {0, 100} <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27846 <... futex resumed> )             = 1
+27848 <... futex resumed> )             = 1
+27847 <... select resumed> )            = 0 (Timeout)
+27845 <... futex resumed> )             = 1
+27841 mmap(0xc820200000, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 <... mmap resumed> )              = 0xc820200000
+27842 <... clock_gettime resumed> {11591, 358761434}) = 0
+27846 futex(0xc82010a110, FUTEX_WAIT, 0, NULL <unfinished ...>
+27848 futex(0xc8200f6a10, FUTEX_WAIT, 0, NULL <unfinished ...>
+27847 futex(0xc82010a590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 clock_gettime(CLOCK_REALTIME,  <unfinished ...>
+27841 mmap(0xc81ffe8000, 32768, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+27842 <... clock_gettime resumed> {1465925457, 142810079}) = 0
+27841 <... mmap resumed> )              = 0xc81ffe8000
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 358847664}) = 0
+27841 futex(0xc8200f6a10, FUTEX_WAKE, 1 <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 360414102}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 144423447}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 <... futex resumed> )             = 1
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 360543008}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 144547112}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 360664180}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 144667859}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 360788399}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 144792653}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 360907268}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 144910886}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 361027195}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 145030767}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 mmap(0xc820300000, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xc820300000
+27841 mmap(0xc81ffe0000, 32768, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xc81ffe0000
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 361107230}) = 0
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 361144247}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 145147629}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 361260684}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 145264191}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 361376912}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 145380162}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 futex(0xc82010a590, FUTEX_WAKE, 1) = 1
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 361494135}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 145497576}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27847 <... futex resumed> )             = 0
+27847 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 1
+27841 <... futex resumed> )             = 0
+27841 futex(0xc82010a110, FUTEX_WAKE, 1) = 1
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27846 <... futex resumed> )             = 0
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 361613665}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 145617092}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27846 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 1
+27841 <... futex resumed> )             = 0
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 361729390}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 145732696}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27845 <... futex resumed> )             = 0
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 361848069}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 145851406}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 361962869}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 145966135}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1 <unfinished ...>
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 <... futex resumed> )             = 1
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 362081562}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 146084991}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 362198082}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 146201274}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1 <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 362317649}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 146320761}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27845 <... futex resumed> )             = 0
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1 <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 362433669}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 146437051}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 <... futex resumed> )             = 1
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 362550353}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 146553535}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27845 <... futex resumed> )             = 0
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 362670607}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 146673888}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1 <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 362794670}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 146798053}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 <... futex resumed> )             = 1
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 362912254}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 146915517}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 363027749}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 147031022}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 363142621}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 147145937}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27845 <... futex resumed> )             = 0
+27845 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 0
+27845 futex(0xc8200f6590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 363259508}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 147266550}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 363380050}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 147383455}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 363496680}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 147500009}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27846 futex(0xc82010a110, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 363613514}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 147617000}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 clock_gettime(CLOCK_REALTIME, {1465925457, 147650965}) = 0
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 363730618}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 147734050}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 363848172}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 147851601}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 363966088}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 147969817}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 364088169}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 148091805}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 364205243}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 148208559}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 364321630}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 148325173}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 364437897}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 148441248}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 364558160}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 148561566}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 364674995}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 148678757}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27847 futex(0xc82010a590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 364798513}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 148802216}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 clock_gettime(CLOCK_REALTIME, {1465925457, 148835173}) = 0
+27841 clock_gettime(CLOCK_REALTIME, {1465925457, 148869134}) = 0
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 364914238}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 148917429}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 365026559}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 149030014}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 365145635}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 149148957}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 clock_gettime(CLOCK_REALTIME, {1465925457, 149203626}) = 0
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 365261775}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 149264876}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 365379244}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 149382826}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 40}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 365528375}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 149533281}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 80}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 365709926}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 149713801}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 160}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 365973738}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 149977573}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 320} <unfinished ...>
+27848 <... futex resumed> )             = 0
+27841 capget({0 /* _LINUX_CAPABILITY_VERSION_??? */, 0},  <unfinished ...>
+27848 futex(0xc82010a590, FUTEX_WAKE, 1) = 1
+27847 <... futex resumed> )             = 0
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 366408298}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 150412718}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 640} <unfinished ...>
+27847 futex(0xc82010a590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27848 futex(0x2219500, FUTEX_WAIT, 0, NULL <unfinished ...>
+27841 <... capget resumed> NULL)        = 0
+27841 openat(AT_FDCWD, "/proc/sys/kernel/cap_last_cap", O_RDONLY|O_CLOEXEC) = 4
+27841 read(4, "36\n", 11)               = 3
+27841 close(4)                          = 0
+27841 uname({sys="Linux", node="localhost.localdomain", ...}) = 0
+27841 clock_gettime(CLOCK_REALTIME, {1465925457, 150805718}) = 0
+27841 clock_gettime(CLOCK_REALTIME, {1465925457, 151074318}) = 0
+27841 clock_gettime(CLOCK_REALTIME, {1465925457, 151095714}) = 0
+27841 socket(PF_LOCAL, SOCK_DGRAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0 <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 367151376}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 151155642}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 1280} <unfinished ...>
+27841 <... socket resumed> )            = 4
+27841 setsockopt(4, SOL_SOCKET, SO_BROADCAST, [1], 4) = 0
+27841 connect(4, {sa_family=AF_LOCAL, sun_path="/run/systemd/journal/socket"}, 30) = 0
+27841 epoll_create1(EPOLL_CLOEXEC)      = 5
+27841 epoll_ctl(5, EPOLL_CTL_ADD, 4, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=1567777888, u64=140399753716832}}) = 0
+27841 getsockname(4, {sa_family=AF_LOCAL, NULL}, [2]) = 0
+27841 getpeername(4, {sa_family=AF_LOCAL, sun_path="/run/systemd/journal/socket"}, [30]) = 0
+27841 stat("/usr/lib/libykcs11.so", 0xc8200815f0) = -1 ENOENT (No such file or directory)
+27841 stat("/usr/lib64/libykcs11.so", 0xc820081680) = -1 ENOENT (No such file or directory)
+27841 stat("/usr/lib/x86_64-linux-gnu/libykcs11.so", 0xc820081710) = -1 ENOENT (No such file or directory)
+27841 stat("/usr/local/lib/libykcs11.so", 0xc8200817a0) = -1 ENOENT (No such file or directory)
+27841 stat("/root/.docker/config.json", 0xc820081830) = -1 ENOENT (No such file or directory)
+27841 stat("/root/.dockercfg", 0xc8200818c0) = -1 ENOENT (No such file or directory)
+27841 stat("/usr/local/bin/docker-credential-secretservice", 0xc820081950) = -1 ENOENT (No such file or directory)
+27841 stat("/usr/local/sbin/docker-credential-secretservice", 0xc8200819e0) = -1 ENOENT (No such file or directory)
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 368552550}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 152562399}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 2560} <unfinished ...>
+27841 stat("/usr/bin/docker-credential-secretservice", 0xc820081a70) = -1 ENOENT (No such file or directory)
+27841 stat("/usr/sbin/docker-credential-secretservice", 0xc820081b00) = -1 ENOENT (No such file or directory)
+27841 stat("/bin/docker-credential-secretservice", 0xc820081b90) = -1 ENOENT (No such file or directory)
+27841 stat("/sbin/docker-credential-secretservice", 0xc820081c20) = -1 ENOENT (No such file or directory)
+27841 stat("/home/hmeng/.local/bin/docker-credential-secretservice", 0xc820081cb0) = -1 ENOENT (No such file or directory)
+27841 stat("/home/hmeng/bin/docker-credential-secretservice", 0xc820081d40) = -1 ENOENT (No such file or directory)
+27841 stat("/usr/local/go/bin/docker-credential-secretservice", 0xc820081dd0) = -1 ENOENT (No such file or directory)
+27841 stat("/home/hmeng/.local/bin/docker-credential-secretservice", 0xc820081e60) = -1 ENOENT (No such file or directory)
+27841 stat("/home/hmeng/bin/docker-credential-secretservice", 0xc820081ef0) = -1 ENOENT (No such file or directory)
+27841 stat("/usr/local/go/bin/docker-credential-secretservice", 0xc8203ce000) = -1 ENOENT (No such file or directory)
+27841 ioctl(0, SNDCTL_TMR_TIMEBASE or SNDRV_TIMER_IOCTL_NEXT_DEVICE or TCGETS, {B38400 opost isig icanon echo ...}) = 0
+27841 ioctl(1, SNDCTL_TMR_TIMEBASE or SNDRV_TIMER_IOCTL_NEXT_DEVICE or TCGETS, {B38400 opost isig icanon echo ...}) = 0
+27841 futex(0xc82010a590, FUTEX_WAKE, 1 <unfinished ...>
+27847 <... futex resumed> )             = 0
+27847 epoll_wait(5, {{EPOLLOUT, {u32=1567777888, u64=140399753716832}}}, 128, 0) = 1
+27847 select(0, NULL, NULL, NULL, {0, 100} <unfinished ...>
+27841 <... futex resumed> )             = 1
+27841 clock_gettime(CLOCK_REALTIME, {1465925457, 153960873}) = 0
+27841 clock_gettime(CLOCK_REALTIME, {1465925457, 153979111}) = 0
+27847 <... select resumed> )            = 0 (Timeout)
+27847 epoll_wait(5,  <unfinished ...>
+27841 socket(PF_LOCAL, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 6
+27841 setsockopt(6, SOL_SOCKET, SO_BROADCAST, [1], 4) = 0
+27841 connect(6, {sa_family=AF_LOCAL, sun_path="/var/run/docker.sock"}, 23) = 0
+27841 clock_gettime(CLOCK_REALTIME, {1465925457, 154289456}) = 0
+27841 epoll_ctl(5, EPOLL_CTL_ADD, 6, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=1567777696, u64=140399753716640}} <unfinished ...>
+27847 <... epoll_wait resumed> {{EPOLLOUT, {u32=1567777696, u64=140399753716640}}}, 128, -1) = 1
+27847 epoll_wait(5,  <unfinished ...>
+27841 <... epoll_ctl resumed> )         = 0
+27841 getsockname(6, {sa_family=AF_LOCAL, NULL}, [2]) = 0
+27841 getpeername(6, {sa_family=AF_LOCAL, sun_path="/var/run/docker.sock"}, [23]) = 0
+27841 futex(0xc82010a110, FUTEX_WAKE, 1 <unfinished ...>
+27846 <... futex resumed> )             = 0
+27846 select(0, NULL, NULL, NULL, {0, 100} <unfinished ...>
+27841 <... futex resumed> )             = 1
+27841 read(6, 0xc8203f8000, 4096)       = -1 EAGAIN (Resource temporarily unavailable)
+27841 write(6, "POST /v1.23/containers/create HT"..., 1621 <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 374342613}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 158357936}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 5120} <unfinished ...>
+27846 <... select resumed> )            = 0 (Timeout)
+27846 futex(0xc82010a110, FUTEX_WAIT, 0, NULL <unfinished ...>
+27847 <... epoll_wait resumed> {{EPOLLOUT, {u32=1567777696, u64=140399753716640}}}, 128, -1) = 1
+27847 epoll_wait(5,  <unfinished ...>
+27841 <... write resumed> )             = 1621
+27841 futex(0xc82010a110, FUTEX_WAKE, 1 <unfinished ...>
+27846 <... futex resumed> )             = 0
+27846 select(0, NULL, NULL, NULL, {0, 100} <unfinished ...>
+27841 <... futex resumed> )             = 1
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27846 <... select resumed> )            = 0 (Timeout)
+27846 futex(0xc82010a110, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 379653252}) = 0
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27847 <... epoll_wait resumed> {{EPOLLOUT, {u32=1567777888, u64=140399753716832}}}, 128, -1) = 1
+27847 epoll_wait(5, {{EPOLLOUT, {u32=1567777888, u64=140399753716832}}}, 128, -1) = 1
+27847 epoll_wait(5, {{EPOLLIN|EPOLLOUT, {u32=1567777696, u64=140399753716640}}}, 128, -1) = 1
+27847 clock_gettime(CLOCK_MONOTONIC, {11591, 732337116}) = 0
+27847 futex(0xc82010a110, FUTEX_WAKE, 1) = 1
+27846 <... futex resumed> )             = 0
+27847 futex(0x21ee760, FUTEX_WAKE, 1 <unfinished ...>
+27846 epoll_wait(5,  <unfinished ...>
+27847 <... futex resumed> )             = 1
+27846 <... epoll_wait resumed> {}, 128, 0) = 0
+27842 <... futex resumed> )             = 0
+27847 read(6,  <unfinished ...>
+27846 sched_yield( <unfinished ...>
+27842 sched_yield( <unfinished ...>
+27847 <... read resumed> "HTTP/1.1 201 Created\r\nContent-Ty"..., 4096) = 234
+27842 <... sched_yield resumed> )       = 0
+27847 mmap(0xc820400000, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+27842 futex(0x21ee6a0, FUTEX_WAKE, 1 <unfinished ...>
+27847 <... mmap resumed> )              = 0xc820400000
+27842 <... futex resumed> )             = 0
+27847 mmap(0xc81ffd8000, 32768, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27847 <... mmap resumed> )              = 0xc81ffd8000
+27842 <... clock_gettime resumed> {11591, 732573866}) = 0
+27847 mmap(0xc000001000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+27842 clock_gettime(CLOCK_REALTIME,  <unfinished ...>
+27847 <... mmap resumed> )              = 0xc000001000
+27842 <... clock_gettime resumed> {1465925457, 516594286}) = 0
+27847 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27847 <... clock_gettime resumed> {11591, 732641443}) = 0
+27847 read(6, 0xc8203f8000, 4096)       = -1 EAGAIN (Resource temporarily unavailable)
+27847 clock_gettime(CLOCK_REALTIME,  <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27847 <... clock_gettime resumed> {1465925457, 516818787}) = 0
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27847 clock_gettime(CLOCK_REALTIME,  <unfinished ...>
+27842 <... clock_gettime resumed> {11591, 732839672}) = 0
+27847 <... clock_gettime resumed> {1465925457, 516845011}) = 0
+27842 clock_gettime(CLOCK_REALTIME,  <unfinished ...>
+27847 socket(PF_LOCAL, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0 <unfinished ...>
+27842 <... clock_gettime resumed> {1465925457, 516854710}) = 0
+27847 <... socket resumed> )            = 7
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27847 setsockopt(7, SOL_SOCKET, SO_BROADCAST, [1], 4) = 0
+27847 connect(7, {sa_family=AF_LOCAL, sun_path="/var/run/docker.sock"}, 23) = 0
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 733531739}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 517535421}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27847 epoll_ctl(5, EPOLL_CTL_ADD, 7, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=1567777504, u64=140399753716448}}) = 0
+27847 getsockname(7, {sa_family=AF_LOCAL, NULL}, [2]) = 0
+27847 getpeername(7, {sa_family=AF_LOCAL, sun_path="/var/run/docker.sock"}, [23]) = 0
+27847 write(7, "POST /v1.23/containers/8eaeb410c"..., 272 <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 733671038}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 517674217}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27847 <... write resumed> )             = 272
+27847 read(7, 0xc820416000, 4096)       = -1 EAGAIN (Resource temporarily unavailable)
+27847 epoll_wait(5, {{EPOLLOUT, {u32=1567777504, u64=140399753716448}}}, 128, 0) = 1
+27847 epoll_wait(5,  <unfinished ...>
+27846 <... sched_yield resumed> )       = 0
+27846 futex(0x21ee6a0, FUTEX_WAKE, 1)   = 0
+27842 <... select resumed> )            = 0 (Timeout)
+27846 futex(0xc82010a110, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 733808141}) = 0
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27847 <... epoll_wait resumed> {{EPOLLOUT, {u32=1567777504, u64=140399753716448}}}, 128, -1) = 1
+27847 epoll_wait(5, {{EPOLLIN|EPOLLOUT, {u32=1567777504, u64=140399753716448}}}, 128, -1) = 1
+27847 clock_gettime(CLOCK_MONOTONIC, {11591, 734516857}) = 0
+27847 futex(0xc82010a110, FUTEX_WAKE, 1) = 1
+27846 <... futex resumed> )             = 0
+27846 epoll_wait(5, {}, 128, 0)         = 0
+27846 epoll_wait(5,  <unfinished ...>
+27847 futex(0x21ee760, FUTEX_WAKE, 1)   = 1
+27842 <... futex resumed> )             = 0
+27842 sched_yield( <unfinished ...>
+27847 read(7, "HTTP/1.1 101 UPGRADED\r\nContent-T"..., 4096) = 109
+27847 ioctl(0, SNDCTL_TMR_TIMEBASE or SNDRV_TIMER_IOCTL_NEXT_DEVICE or TCGETS, {B38400 opost isig icanon echo ...}) = 0
+27847 ioctl(0, SNDCTL_TMR_START or SNDRV_TIMER_IOCTL_TREAD or TCSETS, {B38400 -opost -isig -icanon -echo ...}) = 0
+27847 ioctl(0, SNDCTL_TMR_TIMEBASE or SNDRV_TIMER_IOCTL_NEXT_DEVICE or TCGETS, {B38400 -opost -isig -icanon -echo ...}) = 0
+27847 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 1
+27841 <... futex resumed> )             = 0
+27841 select(0, NULL, NULL, NULL, {0, 100} <unfinished ...>
+27847 rt_sigprocmask(SIG_SETMASK, ~[ILL TRAP BUS FPE SEGV STKFLT CHLD PROF RTMIN RT_1], NULL, 8) = 0
+27847 rt_sigprocmask(SIG_SETMASK, ~[INT ILL TRAP BUS FPE SEGV STKFLT CHLD PROF RTMIN RT_1], NULL, 8) = 0
+27847 futex(0xc8200f6590, FUTEX_WAKE, 1) = 1
+27845 <... futex resumed> )             = 0
+27845 write(6, "POST /v1.23/containers/8eaeb410c"..., 201 <unfinished ...>
+27841 <... select resumed> )            = 0 (Timeout)
+27845 <... write resumed> )             = 201
+27841 futex(0xc82010a590, FUTEX_WAKE, 1 <unfinished ...>
+27845 read(0,  <unfinished ...>
+27841 <... futex resumed> )             = 0
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27846 <... epoll_wait resumed> {{EPOLLOUT, {u32=1567777696, u64=140399753716640}}}, 128, -1) = 1
+27846 epoll_wait(5,  <unfinished ...>
+27847 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 1
+27841 <... futex resumed> )             = 0
+27841 write(1, "", 0)                   = 0
+27841 read(7, 0xc820416000, 4096)       = -1 EAGAIN (Resource temporarily unavailable)
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27847 futex(0xc82010a590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... sched_yield resumed> )       = 0
+27842 futex(0x21ee6a0, FUTEX_WAKE, 1)   = 0
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 735483108}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 519494731}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 735630170}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 519640086}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 735796986}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 519807523}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 735943680}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 519953214}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 736087495}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 520098956}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 736237639}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 520247798}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 736381452}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 520391179}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 736523650}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 520535677}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 736672954}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 520684323}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 736822566}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 520833606}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 737285604}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 521298802}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 737439757}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 521451015}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 737589097}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 521598460}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 737747577}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 521758108}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 737900861}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 521910406}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 738047830}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 522057325}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 738195092}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 522207640}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 738345663}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 522356419}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 738504716}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 522524305}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 738666372}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 522679006}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 738820990}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 522833016}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 738973931}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 522985685}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 739154618}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 523168616}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 739304732}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 523313273}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 739448081}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 523461075}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 739599447}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 523610938}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 739746708}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 523763418}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 739908418}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 523914066}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 740031231}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 524033095}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 740143488}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 524145169}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 740254850}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 524256482}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 740365782}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 524367344}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 740476830}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 524478435}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 740587739}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 524589187}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 740708349}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 524709846}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 740825342}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 524828019}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 740938046}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 524939516}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 741051873}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 525053641}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 741163648}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 525165228}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 741274843}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 525276359}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 741384571}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 525386077}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 741449929}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 525451329}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 741559503}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 525560930}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 741670239}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 525671667}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 741785938}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 525788583}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 741897616}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 525899076}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 742024928}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 526033285}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 742142402}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 526143935}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 742251793}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 526253309}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 742360734}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 526362162}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 742469625}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 526471011}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 40}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 742605402}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 526607043}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 80}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 742777222}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 526798345}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 160}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 743054057}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 527055895}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 320}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 743470249}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 527471975}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 640}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 744208950}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 528210913}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 1280}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 745609622}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 529614281}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 745737071}) = 0
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27846 <... epoll_wait resumed> {{EPOLLOUT, {u32=1567777888, u64=140399753716832}}}, 128, -1) = 1
+27846 epoll_wait(5, {{EPOLLIN|EPOLLOUT, {u32=1567777696, u64=140399753716640}}}, 128, -1) = 1
+27846 clock_gettime(CLOCK_MONOTONIC, {11591, 916856989}) = 0
+27846 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 1
+27846 futex(0x21ee760, FUTEX_WAKE, 1 <unfinished ...>
+27841 <... futex resumed> )             = 0
+27846 <... futex resumed> )             = 1
+27842 <... futex resumed> )             = 0
+27841 epoll_wait(5,  <unfinished ...>
+27842 sched_yield( <unfinished ...>
+27841 <... epoll_wait resumed> {}, 128, 0) = 0
+27842 <... sched_yield resumed> )       = 0
+27841 sched_yield( <unfinished ...>
+27846 read(6,  <unfinished ...>
+27842 futex(0x21ee6a0, FUTEX_WAKE, 1 <unfinished ...>
+27841 <... sched_yield resumed> )       = 0
+27846 <... read resumed> "HTTP/1.1 204 No Content\r\nServer:"..., 4096) = 95
+27842 <... futex resumed> )             = 0
+27841 futex(0x21ee6a0, FUTEX_WAKE, 1 <unfinished ...>
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27841 <... futex resumed> )             = 0
+27842 <... clock_gettime resumed> {11591, 917051004}) = 0
+27841 epoll_wait(5,  <unfinished ...>
+27846 futex(0xc82002ca10, FUTEX_WAKE, 1 <unfinished ...>
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 701084045}) = 0
+27846 <... futex resumed> )             = 1
+27843 <... futex resumed> )             = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27846 read(6, 0xc8203f8000, 4096)       = -1 EAGAIN (Resource temporarily unavailable)
+27843 select(0, NULL, NULL, NULL, {0, 100} <unfinished ...>
+27846 ioctl(1, TIOCGWINSZ, {ws_row=35, ws_col=112, ws_xpixel=0, ws_ypixel=0}) = 0
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 917247466}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 701257709}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27846 write(6, "POST /v1.23/containers/8eaeb410c"..., 213) = 213
+27846 futex(0xc82010a110, FUTEX_WAIT, 0, NULL <unfinished ...>
+27843 <... select resumed> )            = 0 (Timeout)
+27842 <... select resumed> )            = 0 (Timeout)
+27841 <... epoll_wait resumed> {{EPOLLOUT, {u32=1567777696, u64=140399753716640}}}, 128, -1) = 1
+27843 futex(0xc82002ca10, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27841 epoll_wait(5,  <unfinished ...>
+27842 <... clock_gettime resumed> {11591, 917380324}) = 0
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27841 <... epoll_wait resumed> {{EPOLLIN|EPOLLOUT, {u32=1567777696, u64=140399753716640}}}, 128, -1) = 1
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 918313170}) = 0
+27841 futex(0xc82002ca10, FUTEX_WAKE, 1 <unfinished ...>
+27843 <... futex resumed> )             = 0
+27841 <... futex resumed> )             = 1
+27843 epoll_wait(5,  <unfinished ...>
+27841 futex(0x21ee760, FUTEX_WAKE, 1 <unfinished ...>
+27843 <... epoll_wait resumed> {}, 128, 0) = 0
+27842 <... futex resumed> )             = 0
+27841 <... futex resumed> )             = 1
+27843 sched_yield( <unfinished ...>
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27841 read(6,  <unfinished ...>
+27842 <... clock_gettime resumed> {11591, 918430763}) = 0
+27841 <... read resumed> "HTTP/1.1 200 OK\r\nServer: Docker/"..., 4096) = 147
+27842 clock_gettime(CLOCK_REALTIME,  <unfinished ...>
+27841 read(6,  <unfinished ...>
+27842 <... clock_gettime resumed> {1465925457, 702485927}) = 0
+27841 <... read resumed> 0xc8203f8000, 4096) = -1 EAGAIN (Resource temporarily unavailable)
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 futex(0xc82010a590, FUTEX_WAKE, 1 <unfinished ...>
+27847 <... futex resumed> )             = 0
+27841 <... futex resumed> )             = 1
+27847 rt_sigprocmask(SIG_SETMASK, ~[INT ILL TRAP BUS FPE SEGV STKFLT CHLD PROF WINCH RTMIN RT_1],  <unfinished ...>
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27847 <... rt_sigprocmask resumed> NULL, 8) = 0
+27847 futex(0x21ef2b0, FUTEX_WAKE, 1 <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27847 <... futex resumed> )             = 1
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27841 <... futex resumed> )             = 0
+27847 futex(0xc82010a590, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... clock_gettime resumed> {11591, 918695997}) = 0
+27841 epoll_wait(5,  <unfinished ...>
+27842 clock_gettime(CLOCK_REALTIME,  <unfinished ...>
+27841 <... epoll_wait resumed> {}, 128, 0) = 0
+27842 <... clock_gettime resumed> {1465925457, 702738435}) = 0
+27841 epoll_wait(5,  <unfinished ...>
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27843 <... sched_yield resumed> )       = 0
+27843 futex(0x21ee6a0, FUTEX_WAKE, 1)   = 0
+27843 futex(0xc82002ca10, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 918879598}) = 0
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27841 <... epoll_wait resumed> {{EPOLLIN|EPOLLOUT, {u32=1567777504, u64=140399753716448}}}, 128, -1) = 1
+27841 clock_gettime(CLOCK_MONOTONIC, {11591, 919859548}) = 0
+27841 futex(0xc82002ca10, FUTEX_WAKE, 1 <unfinished ...>
+27843 <... futex resumed> )             = 0
+27841 <... futex resumed> )             = 1
+27843 epoll_wait(5,  <unfinished ...>
+27841 futex(0x21ee760, FUTEX_WAKE, 1 <unfinished ...>
+27843 <... epoll_wait resumed> {}, 128, 0) = 0
+27842 <... futex resumed> )             = 0
+27841 <... futex resumed> )             = 1
+27843 sched_yield( <unfinished ...>
+27842 sched_yield( <unfinished ...>
+27841 read(7,  <unfinished ...>
+27843 <... sched_yield resumed> )       = 0
+27841 <... read resumed> "go build -i -ldflags \"-X main.gi"..., 4096) = 135
+27843 futex(0x21ee6a0, FUTEX_WAKE, 1 <unfinished ...>
+27841 write(1, "go build -i -ldflags \"-X main.gi"..., 135 <unfinished ...>
+27843 <... futex resumed> )             = 0
+27841 <... write resumed> )             = 135
+27843 epoll_wait(5,  <unfinished ...>
+27841 read(7, 0xc820416000, 4096)       = -1 EAGAIN (Resource temporarily unavailable)
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... sched_yield resumed> )       = 0
+27842 futex(0x21ee6a0, FUTEX_WAKE, 1)   = 0
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 920184068}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925457, 704194684}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11591, 920332596}) = 0
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27843 <... epoll_wait resumed> {{EPOLLIN|EPOLLOUT, {u32=1567777504, u64=140399753716448}}}, 128, -1) = 1
+27843 clock_gettime(CLOCK_MONOTONIC, {11593, 878632070}) = 0
+27843 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 1
+27841 <... futex resumed> )             = 0
+27843 futex(0x21ee760, FUTEX_WAKE, 1 <unfinished ...>
+27841 epoll_wait(5,  <unfinished ...>
+27843 <... futex resumed> )             = 1
+27842 <... futex resumed> )             = 0
+27841 <... epoll_wait resumed> {}, 128, 0) = 0
+27843 read(7,  <unfinished ...>
+27842 sched_yield( <unfinished ...>
+27841 sched_yield( <unfinished ...>
+27843 <... read resumed> "go test -timeout 3m -tags \"secco"..., 4096) = 100
+27842 <... sched_yield resumed> )       = 0
+27843 write(1, "go test -timeout 3m -tags \"secco"..., 100 <unfinished ...>
+27842 futex(0x21ee6a0, FUTEX_WAKE, 1 <unfinished ...>
+27843 <... write resumed> )             = 100
+27842 <... futex resumed> )             = 0
+27843 read(7,  <unfinished ...>
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27843 <... read resumed> 0xc820416000, 4096) = -1 EAGAIN (Resource temporarily unavailable)
+27842 <... clock_gettime resumed> {11593, 878811248}) = 0
+27843 epoll_wait(5,  <unfinished ...>
+27842 clock_gettime(CLOCK_REALTIME,  <unfinished ...>
+27843 <... epoll_wait resumed> {}, 128, 0) = 0
+27842 <... clock_gettime resumed> {1465925459, 662831738}) = 0
+27843 epoll_wait(5,  <unfinished ...>
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 <... sched_yield resumed> )       = 0
+27841 futex(0x21ee6a0, FUTEX_WAKE, 1)   = 0
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11593, 878981595}) = 0
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27843 <... epoll_wait resumed> {{EPOLLIN|EPOLLOUT, {u32=1567777504, u64=140399753716448}}}, 128, -1) = 1
+27843 clock_gettime(CLOCK_MONOTONIC, {11595, 507431231}) = 0
+27843 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 1
+27841 <... futex resumed> )             = 0
+27843 futex(0x21ee760, FUTEX_WAKE, 1 <unfinished ...>
+27841 epoll_wait(5,  <unfinished ...>
+27843 <... futex resumed> )             = 1
+27842 <... futex resumed> )             = 0
+27841 <... epoll_wait resumed> {}, 128, 0) = 0
+27843 read(7,  <unfinished ...>
+27842 sched_yield( <unfinished ...>
+27841 sched_yield( <unfinished ...>
+27843 <... read resumed> "=== RUN   TestInitJoinNetworkAnd"..., 4096) = 38
+27841 <... sched_yield resumed> )       = 0
+27843 write(1, "=== RUN   TestInitJoinNetworkAnd"..., 38 <unfinished ...>
+27841 futex(0x21ee6a0, FUTEX_WAKE, 1 <unfinished ...>
+27843 <... write resumed> )             = 38
+27841 <... futex resumed> )             = 0
+27843 read(7,  <unfinished ...>
+27841 epoll_wait(5,  <unfinished ...>
+27843 <... read resumed> 0xc820416000, 4096) = -1 EAGAIN (Resource temporarily unavailable)
+27843 futex(0xc82002ca10, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... sched_yield resumed> )       = 0
+27842 futex(0x21ee6a0, FUTEX_WAKE, 1)   = 0
+27842 clock_gettime(CLOCK_MONOTONIC, {11595, 507635374}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925461, 291640640}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11595, 507775199}) = 0
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27841 <... epoll_wait resumed> {{EPOLLIN|EPOLLOUT, {u32=1567777504, u64=140399753716448}}}, 128, -1) = 1
+27841 clock_gettime(CLOCK_MONOTONIC, {11595, 570478139}) = 0
+27841 futex(0xc82002ca10, FUTEX_WAKE, 1 <unfinished ...>
+27843 <... futex resumed> )             = 0
+27841 <... futex resumed> )             = 1
+27843 epoll_wait(5,  <unfinished ...>
+27841 futex(0x21ee760, FUTEX_WAKE, 1 <unfinished ...>
+27843 <... epoll_wait resumed> {}, 128, 0) = 0
+27842 <... futex resumed> )             = 0
+27841 <... futex resumed> )             = 1
+27843 sched_yield( <unfinished ...>
+27842 sched_yield( <unfinished ...>
+27841 read(7,  <unfinished ...>
+27843 <... sched_yield resumed> )       = 0
+27841 <... read resumed> "\33[33mWARN\33[0m[0000] os: process "..., 4096) = 65
+27843 futex(0x21ee6a0, FUTEX_WAKE, 1 <unfinished ...>
+27841 write(1, "\33[33mWARN\33[0m[0000] os: process "..., 65 <unfinished ...>
+27843 <... futex resumed> )             = 0
+27841 <... write resumed> )             = 65
+27843 epoll_wait(5,  <unfinished ...>
+27841 read(7, 0xc820416000, 4096)       = -1 EAGAIN (Resource temporarily unavailable)
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... sched_yield resumed> )       = 0
+27842 futex(0x21ee6a0, FUTEX_WAKE, 1)   = 0
+27842 clock_gettime(CLOCK_MONOTONIC, {11595, 570709318}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925461, 354713620}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11595, 570812056}) = 0
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27843 <... epoll_wait resumed> {{EPOLLIN|EPOLLOUT, {u32=1567777504, u64=140399753716448}}}, 128, -1) = 1
+27843 clock_gettime(CLOCK_MONOTONIC, {11595, 571150599}) = 0
+27843 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 1
+27841 <... futex resumed> )             = 0
+27843 futex(0x21ee760, FUTEX_WAKE, 1 <unfinished ...>
+27841 epoll_wait(5,  <unfinished ...>
+27843 <... futex resumed> )             = 1
+27842 <... futex resumed> )             = 0
+27841 <... epoll_wait resumed> {}, 128, 0) = 0
+27843 read(7,  <unfinished ...>
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27841 epoll_wait(5,  <unfinished ...>
+27843 <... read resumed> "\r\n", 4096)  = 2
+27842 <... clock_gettime resumed> {11595, 571244677}) = 0
+27843 write(1, "\r\n", 2 <unfinished ...>
+27842 clock_gettime(CLOCK_REALTIME,  <unfinished ...>
+27843 <... write resumed> )             = 2
+27842 <... clock_gettime resumed> {1465925461, 355285346}) = 0
+27843 read(7,  <unfinished ...>
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27843 <... read resumed> 0xc820416000, 4096) = -1 EAGAIN (Resource temporarily unavailable)
+27843 futex(0xc82002ca10, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11595, 571431434}) = 0
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27841 <... epoll_wait resumed> {{EPOLLIN|EPOLLOUT, {u32=1567777504, u64=140399753716448}}}, 128, -1) = 1
+27841 clock_gettime(CLOCK_MONOTONIC, {11595, 599796539}) = 0
+27841 futex(0xc82002ca10, FUTEX_WAKE, 1 <unfinished ...>
+27843 <... futex resumed> )             = 0
+27841 <... futex resumed> )             = 1
+27843 epoll_wait(5,  <unfinished ...>
+27841 futex(0x21ee760, FUTEX_WAKE, 1 <unfinished ...>
+27843 <... epoll_wait resumed> {}, 128, 0) = 0
+27842 <... futex resumed> )             = 0
+27841 <... futex resumed> )             = 1
+27843 sched_yield( <unfinished ...>
+27842 sched_yield( <unfinished ...>
+27841 read(7,  <unfinished ...>
+27842 <... sched_yield resumed> )       = 0
+27841 <... read resumed> "--- FAIL: TestInitJoinNetworkAnd"..., 4096) = 207
+27842 futex(0x21ee6a0, FUTEX_WAKE, 1 <unfinished ...>
+27841 write(1, "--- FAIL: TestInitJoinNetworkAnd"..., 207 <unfinished ...>
+27842 <... futex resumed> )             = 0
+27841 <... write resumed> )             = 207
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27841 read(7,  <unfinished ...>
+27842 <... clock_gettime resumed> {11595, 600026836}) = 0
+27841 <... read resumed> 0xc820416000, 4096) = -1 EAGAIN (Resource temporarily unavailable)
+27842 clock_gettime(CLOCK_REALTIME,  <unfinished ...>
+27841 epoll_wait(5,  <unfinished ...>
+27842 <... clock_gettime resumed> {1465925461, 384056704}) = 0
+27841 <... epoll_wait resumed> {}, 128, 0) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 epoll_wait(5,  <unfinished ...>
+27843 <... sched_yield resumed> )       = 0
+27843 futex(0x21ee6a0, FUTEX_WAKE, 1)   = 0
+27843 futex(0xc82002ca10, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27841 <... epoll_wait resumed> {{EPOLLIN|EPOLLOUT, {u32=1567777504, u64=140399753716448}}}, 128, -1) = 1
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27841 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27842 <... clock_gettime resumed> {11595, 600268836}) = 0
+27841 <... clock_gettime resumed> {11595, 600270456}) = 0
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27841 futex(0xc82002ca10, FUTEX_WAKE, 1 <unfinished ...>
+27843 <... futex resumed> )             = 0
+27841 <... futex resumed> )             = 1
+27843 epoll_wait(5,  <unfinished ...>
+27841 futex(0x21ee760, FUTEX_WAKE, 1 <unfinished ...>
+27843 <... epoll_wait resumed> {}, 128, 0) = 0
+27842 <... futex resumed> )             = 0
+27841 <... futex resumed> )             = 1
+27843 sched_yield( <unfinished ...>
+27842 sched_yield( <unfinished ...>
+27841 read(7,  <unfinished ...>
+27843 <... sched_yield resumed> )       = 0
+27841 <... read resumed> "\r\nFAIL\t_/go/src/github.com/openc"..., 4096) = 80
+27843 futex(0x21ee6a0, FUTEX_WAKE, 1 <unfinished ...>
+27841 write(1, "\r\nFAIL\t_/go/src/github.com/openc"..., 80 <unfinished ...>
+27843 <... futex resumed> )             = 0
+27841 <... write resumed> )             = 80
+27843 epoll_wait(5,  <unfinished ...>
+27841 read(7,  <unfinished ...>
+27843 <... epoll_wait resumed> {{EPOLLOUT, {u32=1567777504, u64=140399753716448}}}, 128, -1) = 1
+27841 <... read resumed> 0xc820416000, 4096) = -1 EAGAIN (Resource temporarily unavailable)
+27843 epoll_wait(5,  <unfinished ...>
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... sched_yield resumed> )       = 0
+27842 futex(0x21ee6a0, FUTEX_WAKE, 1)   = 0
+27842 clock_gettime(CLOCK_MONOTONIC, {11595, 600891593}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925461, 384900948}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11595, 601052044}) = 0
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27843 <... epoll_wait resumed> {{EPOLLIN|EPOLLOUT, {u32=1567777504, u64=140399753716448}}}, 128, -1) = 1
+27843 clock_gettime(CLOCK_MONOTONIC, {11595, 606082977}) = 0
+27843 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 1
+27841 <... futex resumed> )             = 0
+27843 futex(0x21ee760, FUTEX_WAKE, 1 <unfinished ...>
+27841 epoll_wait(5,  <unfinished ...>
+27843 <... futex resumed> )             = 1
+27842 <... futex resumed> )             = 0
+27841 <... epoll_wait resumed> {}, 128, 0) = 0
+27843 read(7,  <unfinished ...>
+27842 sched_yield( <unfinished ...>
+27841 epoll_wait(5,  <unfinished ...>
+27843 <... read resumed> "Makefile:60: recipe for target '"..., 4096) = 90
+27843 write(1, "Makefile:60: recipe for target '"..., 90) = 90
+27843 read(7, 0xc820416000, 4096)       = -1 EAGAIN (Resource temporarily unavailable)
+27843 futex(0xc82002ca10, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... sched_yield resumed> )       = 0
+27842 futex(0x21ee6a0, FUTEX_WAKE, 1)   = 0
+27842 clock_gettime(CLOCK_MONOTONIC, {11595, 606331687}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925461, 390341967}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11595, 607334005}) = 0
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27841 <... epoll_wait resumed> {{EPOLLIN|EPOLLOUT|EPOLLRDHUP, {u32=1567777504, u64=140399753716448}}}, 128, -1) = 1
+27841 clock_gettime(CLOCK_MONOTONIC, {11595, 640658057}) = 0
+27841 futex(0xc82002ca10, FUTEX_WAKE, 1 <unfinished ...>
+27843 <... futex resumed> )             = 0
+27841 <... futex resumed> )             = 1
+27843 epoll_wait(5,  <unfinished ...>
+27841 futex(0x21ee760, FUTEX_WAKE, 1 <unfinished ...>
+27843 <... epoll_wait resumed> {}, 128, 0) = 0
+27842 <... futex resumed> )             = 0
+27841 <... futex resumed> )             = 1
+27843 sched_yield( <unfinished ...>
+27842 sched_yield( <unfinished ...>
+27841 read(7,  <unfinished ...>
+27842 <... sched_yield resumed> )       = 0
+27841 <... read resumed> "", 4096)      = 0
+27842 futex(0x21ee6a0, FUTEX_WAKE, 1 <unfinished ...>
+27841 write(6, "POST /v1.23/containers/8eaeb410c"..., 200 <unfinished ...>
+27842 <... futex resumed> )             = 0
+27841 <... write resumed> )             = 200
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27841 epoll_wait(5,  <unfinished ...>
+27842 <... clock_gettime resumed> {11595, 643274899}) = 0
+27841 <... epoll_wait resumed> {}, 128, 0) = 0
+27842 clock_gettime(CLOCK_REALTIME,  <unfinished ...>
+27841 epoll_wait(5,  <unfinished ...>
+27842 <... clock_gettime resumed> {1465925461, 427291488}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11595, 643445996}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925461, 427450314}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27843 <... sched_yield resumed> )       = 0
+27843 futex(0x21ee6a0, FUTEX_WAKE, 1)   = 0
+27843 futex(0xc82002ca10, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11595, 644124951}) = 0
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27841 <... epoll_wait resumed> {{EPOLLOUT, {u32=1567777696, u64=140399753716640}}}, 128, -1) = 1
+27841 epoll_wait(5,  <unfinished ...>
+27845 <... read resumed> "\3", 32768)   = 1
+27845 futex(0x21ee760, FUTEX_WAKE, 1)   = 1
+27842 <... futex resumed> )             = 0
+27845 write(7, "\3", 1 <unfinished ...>
+27842 sched_yield( <unfinished ...>
+27845 <... write resumed> )             = 1
+27845 read(0,  <unfinished ...>
+27842 <... sched_yield resumed> )       = 0
+27842 futex(0x21ee6a0, FUTEX_WAKE, 1)   = 0
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 770024323}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 554037486}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 <... epoll_wait resumed> {{EPOLLIN|EPOLLOUT|EPOLLRDHUP, {u32=1567777504, u64=140399753716448}}}, 128, -1) = 1
+27841 epoll_wait(5,  <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 770184635}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 554194809}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 770334754}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 554344282}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 770478920}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 554488408}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 770622146}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 554631460}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 770759422}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 554768520}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 770912408}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 554921718}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 771053206}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 555062570}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 771190002}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 555199379}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 771326416}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 555335513}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 771462331}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 555471412}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 771598235}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 555607274}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 771733788}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 555742943}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 771871313}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 555880707}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 772018446}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 556028621}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 772156694}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 556165849}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 772293004}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 556301972}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 772428608}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 556437544}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 772564240}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 556573310}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 772700213}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 556709264}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 772837323}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 556846626}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 772973612}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 556982685}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 773121079}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 557130286}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 773263607}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 557272908}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 773399993}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 557409268}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 773536020}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 557545154}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 773671700}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 557680759}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 773809890}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 557819098}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 773946288}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 557955341}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 774085101}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 558094456}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 774221769}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 558230981}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 774357882}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 558367037}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 774494182}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 558503321}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 774629923}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 558639035}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 774765619}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 558780429}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 774908839}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 558917890}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 775047569}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 559056693}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 775183614}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 559192687}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 775319673}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 559328740}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 775455317}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 559464535}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 775591028}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 559599980}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 775726857}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 559736029}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 775863366}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 559871709}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 775996654}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 560014862}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 776140575}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 560148965}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 776273921}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 560286744}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 776412757}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 560420937}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 776546009}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 560554310}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 776678947}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 560687126}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 776812729}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 560821153}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 776946134}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 560954515}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 40}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 777109637}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 561118266}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 80}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 777303671}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 561312049}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 160}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 777583219}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 561591818}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 320}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 778027523}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 562036343}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 640}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 778814588}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 562823166}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 1280}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 780218937}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925472, 564227646}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11606, 780360755}) = 0
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27845 <... read resumed> "\3", 32768)   = 1
+27845 futex(0x21ee760, FUTEX_WAKE, 1)   = 1
+27842 <... futex resumed> )             = 0
+27845 write(7, "\3", 1)                 = 1
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27845 read(0,  <unfinished ...>
+27842 <... clock_gettime resumed> {11608, 72411331}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 856420264}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 72546171}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 856552150}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 72674436}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 856679869}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 72825640}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 856830395}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 72956608}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 856961185}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 73085909}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 857090293}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 73205126}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 857209246}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 73323048}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 857326887}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 73440243}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 857442170}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 73558233}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 857560288}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 73668385}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 857670007}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 73777998}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 857788815}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 73900194}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 857901976}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 74021730}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 858023863}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 74132375}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 858134131}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 74242028}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 858243634}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 74351528}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 858353169}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 74460361}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 858461640}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 74568669}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 858570000}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 74676941}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 858678243}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 74789852}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 858791422}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 74898744}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 858900093}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 75009570}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 859024993}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 75136732}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 859138334}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 75246903}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 859248261}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 75356051}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 859357365}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 75465198}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 859466470}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 75574345}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 859575670}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 75683387}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 859684602}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 75796870}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 859798320}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 75906370}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 859907836}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 76020590}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 860022573}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 76131021}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 860132366}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 76240052}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 860241429}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 76349106}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 860350373}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 76457945}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 860459322}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 76566862}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 860568160}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 76675745}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 860677035}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 76788649}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 860790237}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 76898442}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 860899687}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 77014330}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 861015993}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 77123911}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 861125181}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 77232795}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 861234056}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 77341617}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 861342915}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 77461084}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 861462724}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 77578895}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 861580161}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 77688038}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 861689357}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 77798335}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 861799640}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 77907437}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 861908665}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 78018228}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 862019725}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 78127701}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 862129131}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 40}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 78262299}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 862263838}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 80}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 78431819}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 862433157}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 160}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 78685696}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 862687206}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 320}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 79122751}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 863124928}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 640}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 79891660}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 863893844}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 1280}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 81424514}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 865435128}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 2560}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 84254165}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925473, 868264448}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11608, 84392643}) = 0
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27845 <... read resumed> "\3", 32768)   = 1
+27845 futex(0x21ee760, FUTEX_WAKE, 1)   = 1
+27842 <... futex resumed> )             = 0
+27845 write(7, "\3", 1 <unfinished ...>
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27845 <... write resumed> )             = 1
+27842 <... clock_gettime resumed> {11613, 136640601}) = 0
+27845 read(0,  <unfinished ...>
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 920678078}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 136832908}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 920843693}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 136985358}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 921014696}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 137157182}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 921167518}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 137299447}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 921309403}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 137440289}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 921450199}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 137581048}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 921590834}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 137721104}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 921743831}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 137888733}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 921899601}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 138037441}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 922047994}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 138180044}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 922190358}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 138321653}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 922331759}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 138463136}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 922473324}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 138604242}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 922614390}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 138746124}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 922756265}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 138895972}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 922906423}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 139055862}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 923066141}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 139197918}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 923208000}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 139339471}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 923349605}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 139481032}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 923491316}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 139622174}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 923632373}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 139763658}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 923780333}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 139913882}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 923924097}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 140058449}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 924068661}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 140200260}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 924210451}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 140341343}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 924351807}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 140488062}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 924498495}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 140629280}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 924639286}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 140770469}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 924787466}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 140919715}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 924929767}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 141063724}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 925074049}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 141205708}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 925215924}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 141347147}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 925357235}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 141487971}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 925498073}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 141629287}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 925639277}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 141770469}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 925786993}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 141918987}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 925929235}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 142063060}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 926073499}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 142209775}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 926221138}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 142353271}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 926363573}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 142494675}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 926504812}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 142636024}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 926646186}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 142777227}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 926794120}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 142925900}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 926936151}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 143070051}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 927080293}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 143211414}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 927221556}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 143352837}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 927362979}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 143493648}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 927503746}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 143634440}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 927644517}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 143775383}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 927792359}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 143924019}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 927934177}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 40}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 144096153}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 928106930}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 80}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 144298603}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 928308855}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 160}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 144588761}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 928599460}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 320}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 145043516}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 929054494}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 640}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 145833190}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 929843809}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 1280}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 147382442}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925478, 931400582}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11613, 147551060}) = 0
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27841 <... epoll_wait resumed> {{EPOLLIN|EPOLLOUT, {u32=1567777696, u64=140399753716640}}}, 128, -1) = 1
+27841 clock_gettime(CLOCK_MONOTONIC, {11615, 810405221}) = 0
+27841 futex(0xc82002ca10, FUTEX_WAKE, 1) = 1
+27841 futex(0x21ee760, FUTEX_WAKE, 1 <unfinished ...>
+27842 <... futex resumed> )             = 0
+27841 <... futex resumed> )             = 1
+27843 <... futex resumed> )             = 0
+27842 sched_yield( <unfinished ...>
+27841 read(6,  <unfinished ...>
+27843 epoll_wait(5,  <unfinished ...>
+27842 <... sched_yield resumed> )       = 0
+27841 <... read resumed> "HTTP/1.1 200 OK\r\nContent-Type: a"..., 4096) = 156
+27843 <... epoll_wait resumed> {}, 128, 0) = 0
+27842 futex(0x21ee6a0, FUTEX_WAKE, 1 <unfinished ...>
+27841 read(6,  <unfinished ...>
+27842 <... futex resumed> )             = 0
+27841 <... read resumed> 0xc8203f8000, 4096) = -1 EAGAIN (Resource temporarily unavailable)
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27843 epoll_wait(5,  <unfinished ...>
+27841 sched_yield( <unfinished ...>
+27842 <... clock_gettime resumed> {11615, 810810655}) = 0
+27841 <... sched_yield resumed> )       = 0
+27843 <... epoll_wait resumed> {}, 128, 0) = 0
+27842 clock_gettime(CLOCK_REALTIME,  <unfinished ...>
+27841 futex(0xc820400358, FUTEX_WAKE, 1 <unfinished ...>
+27843 select(0, NULL, NULL, NULL, {0, 100} <unfinished ...>
+27842 <... clock_gettime resumed> {1465925481, 594875983}) = 0
+27841 <... futex resumed> )             = 0
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 write(6, "GET /v1.23/containers/8eaeb410c5"..., 154 <unfinished ...>
+27843 <... select resumed> )            = 0 (Timeout)
+27841 <... write resumed> )             = 154
+27843 epoll_wait(5,  <unfinished ...>
+27841 epoll_wait(5,  <unfinished ...>
+27843 <... epoll_wait resumed> {{EPOLLOUT, {u32=1567777696, u64=140399753716640}}}, 128, 0) = 1
+27842 <... select resumed> )            = 0 (Timeout)
+27841 <... epoll_wait resumed> {}, 128, 0) = 0
+27843 epoll_wait(5,  <unfinished ...>
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... clock_gettime resumed> {11615, 811274062}) = 0
+27842 clock_gettime(CLOCK_REALTIME, {1465925481, 595300543}) = 0
+27842 select(0, NULL, NULL, NULL, {0, 20}) = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11615, 811450878}) = 0
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27843 <... epoll_wait resumed> {{EPOLLIN|EPOLLOUT, {u32=1567777696, u64=140399753716640}}}, 128, -1) = 1
+27843 clock_gettime(CLOCK_MONOTONIC, {11615, 811777875}) = 0
+27843 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 1
+27841 <... futex resumed> )             = 0
+27843 futex(0x21ee760, FUTEX_WAKE, 1)   = 1
+27841 epoll_wait(5,  <unfinished ...>
+27843 read(6,  <unfinished ...>
+27842 <... futex resumed> )             = 0
+27841 <... epoll_wait resumed> {}, 128, 0) = 0
+27843 <... read resumed> "HTTP/1.1 200 OK\r\nContent-Type: a"..., 4096) = 4096
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27843 futex(0xc82010a110, FUTEX_WAKE, 1 <unfinished ...>
+27841 epoll_wait(5,  <unfinished ...>
+27842 <... clock_gettime resumed> {11615, 812055876}) = 0
+27846 <... futex resumed> )             = 0
+27843 <... futex resumed> )             = 1
+27842 clock_gettime(CLOCK_REALTIME,  <unfinished ...>
+27846 select(0, NULL, NULL, NULL, {0, 100} <unfinished ...>
+27843 read(6, 0xc8203f8000, 4096)       = -1 EAGAIN (Resource temporarily unavailable)
+27842 <... clock_gettime resumed> {1465925481, 596233336}) = 0
+27843 futex(0xc82002ca10, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 <... epoll_wait resumed> {{EPOLLIN|EPOLLOUT, {u32=1567777696, u64=140399753716640}}}, 128, -1) = 1
+27841 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27846 <... select resumed> )            = 0 (Timeout)
+27842 <... select resumed> )            = 0 (Timeout)
+27841 <... clock_gettime resumed> {11615, 812384584}) = 0
+27846 futex(0xc82010a110, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27841 futex(0xc82010a110, FUTEX_WAKE, 1 <unfinished ...>
+27846 <... futex resumed> )             = -1 EAGAIN (Resource temporarily unavailable)
+27842 <... clock_gettime resumed> {11615, 812473958}) = 0
+27841 <... futex resumed> )             = 0
+27846 epoll_wait(5,  <unfinished ...>
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27841 futex(0x21ee760, FUTEX_WAKE, 1 <unfinished ...>
+27846 <... epoll_wait resumed> {}, 128, 0) = 0
+27842 <... futex resumed> )             = -1 EAGAIN (Resource temporarily unavailable)
+27841 <... futex resumed> )             = 0
+27846 sched_yield( <unfinished ...>
+27842 sched_yield( <unfinished ...>
+27841 read(6,  <unfinished ...>
+27846 <... sched_yield resumed> )       = 0
+27842 <... sched_yield resumed> )       = 0
+27841 <... read resumed> "455cc060\",\"EndpointID\":\"\",\"Gatew"..., 4096) = 161
+27846 futex(0x21ee6a0, FUTEX_WAKE, 1 <unfinished ...>
+27842 futex(0x21ee6a0, FUTEX_WAKE, 1 <unfinished ...>
+27841 read(6,  <unfinished ...>
+27846 <... futex resumed> )             = 0
+27842 <... futex resumed> )             = 0
+27841 <... read resumed> 0xc8203f8000, 4096) = -1 EAGAIN (Resource temporarily unavailable)
+27846 epoll_wait(5,  <unfinished ...>
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27841 write(6, "DELETE /v1.23/containers/8eaeb41"..., 156 <unfinished ...>
+27846 <... epoll_wait resumed> {}, 128, 0) = 0
+27842 <... clock_gettime resumed> {11615, 813721175}) = 0
+27841 <... write resumed> )             = 156
+27846 epoll_wait(5,  <unfinished ...>
+27842 clock_gettime(CLOCK_REALTIME,  <unfinished ...>
+27841 epoll_wait(5,  <unfinished ...>
+27846 <... epoll_wait resumed> {{EPOLLOUT, {u32=1567777696, u64=140399753716640}}}, 128, 0) = 1
+27842 <... clock_gettime resumed> {1465925481, 600542205}) = 0
+27841 <... epoll_wait resumed> {}, 128, 0) = 0
+27846 epoll_wait(5,  <unfinished ...>
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27841 futex(0x21ef2b0, FUTEX_WAIT, 0, NULL <unfinished ...>
+27842 <... select resumed> )            = 0 (Timeout)
+27842 clock_gettime(CLOCK_MONOTONIC, {11615, 816717306}) = 0
+27842 futex(0x21ee760, FUTEX_WAIT, 0, {60, 0} <unfinished ...>
+27846 <... epoll_wait resumed> {{EPOLLIN|EPOLLOUT, {u32=1567777696, u64=140399753716640}}}, 128, -1) = 1
+27846 clock_gettime(CLOCK_MONOTONIC, {11635, 919321901}) = 0
+27846 futex(0x21ef2b0, FUTEX_WAKE, 1)   = 1
+27841 <... futex resumed> )             = 0
+27846 futex(0x21ee760, FUTEX_WAKE, 1 <unfinished ...>
+27841 epoll_wait(5,  <unfinished ...>
+27846 <... futex resumed> )             = 1
+27842 <... futex resumed> )             = 0
+27841 <... epoll_wait resumed> {}, 128, 0) = 0
+27846 read(6,  <unfinished ...>
+27842 sched_yield( <unfinished ...>
+27841 sched_yield( <unfinished ...>
+27846 <... read resumed> "HTTP/1.1 500 Internal Server Err"..., 4096) = 335
+27842 <... sched_yield resumed> )       = 0
+27846 read(6,  <unfinished ...>
+27842 futex(0x21ee6a0, FUTEX_WAKE, 1 <unfinished ...>
+27846 <... read resumed> 0xc8203f8000, 4096) = -1 EAGAIN (Resource temporarily unavailable)
+27842 <... futex resumed> )             = 0
+27846 write(2, "Error response from daemon: Driv"..., 162 <unfinished ...>
+27842 clock_gettime(CLOCK_MONOTONIC,  <unfinished ...>
+27846 <... write resumed> )             = 162
+27842 <... clock_gettime resumed> {11635, 919537716}) = 0
+27846 ioctl(0, SNDCTL_TMR_START or SNDRV_TIMER_IOCTL_TREAD or TCSETS <unfinished ...>
+27842 clock_gettime(CLOCK_REALTIME,  <unfinished ...>
+27846 <... ioctl resumed> , {B38400 opost isig icanon echo ...}) = 0
+27842 <... clock_gettime resumed> {1465925501, 703573262}) = 0
+27846 ioctl(0, SNDCTL_TMR_TIMEBASE or SNDRV_TIMER_IOCTL_NEXT_DEVICE or TCGETS <unfinished ...>
+27842 select(0, NULL, NULL, NULL, {0, 20} <unfinished ...>
+27846 <... ioctl resumed> , {B38400 opost isig icanon echo ...}) = 0
+27846 close(0)                          = 0
+27846 exit_group(2)                     = ?
+27846 +++ exited with 2 +++
+27845 +++ exited with 2 +++
+27842 +++ exited with 2 +++
+27847 +++ exited with 2 +++
+27848 +++ exited with 2 +++
+27844 +++ exited with 2 +++
+27843 +++ exited with 2 +++
+27841 +++ exited with 2 +++

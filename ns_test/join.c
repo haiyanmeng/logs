@@ -126,7 +126,6 @@ main(int argc, char *argv[])
         errExit("clone");
 
 	printf("the parent pid is: %ld; the child pid is: %ld\n", (long)getpid(), (long)pid);
-	printf("******* info of the parent process - end ********\n");
 
     /* Parent falls through to here.  Wait for child. */
 

@@ -45,17 +45,16 @@ main(int argc, char *argv[])
     pid_t pid;
 
     /* Create child; child commences execution in childFunc() */
+	printf("******* info of the parent process - start ********\n");
+    caps = cap_get_proc();
+    printf("capabilities: %s\n", cap_to_text(caps, NULL));
 
     pid = clone(childFunc, child_stack + STACK_SIZE,    /* Assume stack grows downward */
                 CLONE_NEWPID | CLONE_NEWNS | CLONE_NEWNET | CLONE_NEWUTS | CLONE_NEWIPC | CLONE_NEWUSER | SIGCHLD, argv[1]);
     if (pid == -1)
         errExit("clone");
 
-	printf("******* info of the parent process - start ********\n");
 	printf("the parent pid is: %ld; the child pid is: %ld\n", (long)getpid(), (long)pid);
-    caps = cap_get_proc();
-    printf("capabilities: %s\n", cap_to_text(caps, NULL));
-	printf("******* info of the parent process - end ********\n");
 
     /* Parent falls through to here.  Wait for child. */
 

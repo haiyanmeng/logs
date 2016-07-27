@@ -24,11 +24,13 @@ childFunc(void *arg)
 {
     cap_t caps;
 
+	printf("\n\n******* info of the child process - start ********\n");
     printf("eUID = %ld;  eGID = %ld\n", (long) geteuid(), (long) getegid());
     printf("pid = %ld;  ppid = %ld\n", (long) getpid(), (long) getppid());
 
     caps = cap_get_proc();
     printf("capabilities: %s\n", cap_to_text(caps, NULL));
+
 	execlp ("sh", "sh", (char *)0);
 }
 
@@ -39,6 +41,7 @@ static char child_stack[STACK_SIZE];    /* Space for child's stack */
 int
 main(int argc, char *argv[])
 {
+	cap_t caps;
     pid_t pid;
 
     /* Create child; child commences execution in childFunc() */
@@ -48,7 +51,11 @@ main(int argc, char *argv[])
     if (pid == -1)
         errExit("clone");
 
+	printf("******* info of the parent process - start ********\n");
 	printf("the parent pid is: %ld; the child pid is: %ld\n", (long)getpid(), (long)pid);
+    caps = cap_get_proc();
+    printf("capabilities: %s\n", cap_to_text(caps, NULL));
+	printf("******* info of the parent process - end ********\n");
 
     /* Parent falls through to here.  Wait for child. */
 

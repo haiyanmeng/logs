@@ -52,6 +52,7 @@ static char child_stack[STACK_SIZE];    /* Space for child's stack */
 int
 main(int argc, char *argv[])
 {
+    cap_t caps;
     pid_t pid;
 	char path[PATH_MAX];
 	int fd;
@@ -64,7 +65,9 @@ main(int argc, char *argv[])
 		printf("open(%s) failed: %s\n", path, strerror(errno));
 		exit(EXIT_FAILURE);
 	}
-
+    caps = cap_get_proc();
+    printf("before joining user namespace of process %s, \ncapabilities: %s\n\n", argv[1], cap_to_text(caps, NULL));
+	
 	if(setns(fd, 0) == -1) {
 		printf("setns(%d) failed: %s\n", fd, strerror(errno));
 		close(fd);
@@ -72,8 +75,14 @@ main(int argc, char *argv[])
 	}
 	close(fd);
 
+    caps = cap_get_proc();
+    printf("after joint user namespace of process %s, \ncapabilities: %s\n\n", argv[1], cap_to_text(caps, NULL));
+	
     pid = clone(childFunc, child_stack + STACK_SIZE,    /* Assume stack grows downward */
-                CLONE_NEWPID | CLONE_NEWNS | CLONE_NEWNET | CLONE_NEWUTS | CLONE_NEWIPC | SIGCHLD, argv[1]);
+		CLONE_NEWNS|SIGCHLD, argv[1]);
+                //CLONE_NEWPID|CLONE_NEWUTS|CLONE_NEWIPC|CLONE_NEWNET|SIGCHLD, argv[1]);
+// good flags: CLONE_NEWPID CLONE_NEWUTS CLONE_NEWIPC CLONE_NEWNET
+// bad flags: CLONE_NEWNS 
     if (pid == -1)
         errExit("clone");
 

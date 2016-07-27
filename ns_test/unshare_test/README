@@ -1,0 +1,20 @@
+gcc -o join join.c -lcap
+gcc -o demo_userns demo_userns.c -lcap
+./demo_userns
+./join [options] <the child pid returned from ./demo_userns>
+
+**** the usage of join ****
+[hmeng@localhost ns_test]$ ./join -h
+Usage: ./join [options] <pid>
+
+Create a child process that joins the user namespace of another process <pid>, and executes `sh`in a new mount|uts|pid|ipc|network namespace,
+and possibly the combinations of these five namespaces.
+
+Options can be:
+
+    -i          New IPC namespace
+    -m          New mount namespace
+    -n          New network namespace
+    -p          New PID namespace
+    -u          New UTS namespace
+

@@ -1,0 +1,4 @@
+gcc -o join join.c -lcap
+gcc -o demo_userns demo_userns.c -lcap
+./demo_userns
+./join <the child pid returned from ./demo_userns>

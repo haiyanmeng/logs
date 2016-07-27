@@ -28,6 +28,7 @@ main(int argc, char *argv[])
 	/* Create child; child commences execution in childFunc() */
 	printf("******* info of the parent process - start ********\n");
 	caps = cap_get_proc();
+	printf("Before unshare, the capabilities are:\n");
 	printf("capabilities: %s\n", cap_to_text(caps, NULL));
 
 	r = unshare(CLONE_NEWPID | CLONE_NEWNS | CLONE_NEWNET | CLONE_NEWUTS | CLONE_NEWIPC | CLONE_NEWUSER );
@@ -35,6 +36,10 @@ main(int argc, char *argv[])
 		printf("unshare failed: %s\n", strerror(errno));
 		exit(EXIT_FAILURE);
 	}
+	caps = cap_get_proc();
+	printf("After unshare, the capabilities are:\n");
+	printf("capabilities: %s\n", cap_to_text(caps, NULL));
+
 	printf("the process pid is: %ld\n", (long)getpid());
 
 	r = execlp("sh", "sh", (char *)0);

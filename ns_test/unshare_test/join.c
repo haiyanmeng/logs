@@ -43,30 +43,6 @@ usage(char *pname)
 	exit(EXIT_FAILURE);
 }
 
-static int					  /* Startup function for cloned child */
-childFunc(void *arg)
-{
-	cap_t caps;
-	int r;
-
-	printf("\n\n******* info of the child process - start ********\n");
-	printf("eUID = %ld;  eGID = %ld\n", (long) geteuid(), (long) getegid());
-	printf("pid = %ld;  ppid = %ld\n", (long) getpid(), (long) getppid());
-
-	caps = cap_get_proc();
-	printf("capabilities: %s\n", cap_to_text(caps, NULL));
-	
-	r = execlp("sh", "sh", (char *)0);
-	if(r == -1) {
-		printf("execlp failed: %s\n", strerror(errno));
-		exit(EXIT_FAILURE);
-	}
-}
-
-#define STACK_SIZE (1024 * 1024)
-
-static char child_stack[STACK_SIZE];	/* Space for child's stack */
-
 int
 main(int argc, char *argv[])
 {

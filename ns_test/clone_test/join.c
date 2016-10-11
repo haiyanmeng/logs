@@ -1,13 +1,3 @@
-/* demo_userns.c
-
-   Copyright 2013, Michael Kerrisk
-   Licensed under GNU General Public License v2 or later
-
-   Demonstrate the use of the clone() CLONE_NEWUSER flag.
-
-   Link with "-lcap" and make sure that the "libcap-devel" (or
-   similar) package is installed on the system.
-*/
 #define _GNU_SOURCE
 #include <sys/capability.h>
 #include <sys/wait.h>
